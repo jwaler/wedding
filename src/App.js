@@ -145,7 +145,7 @@ export default class App extends React.Component {
                   </div>
                   <p></p>
                   <div style={{ fontSize: "12px !important;" }}>
-                    <form action="/#programme">
+                    <form action="#programme">
                       <button type="submit" className="button-mairie-map">
                         Voir le programme
                       </button>
