@@ -82,8 +82,7 @@ export default class AttendFormR extends React.Component {
     const specialCharacter = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
     // console.log("Guest", this.state.activeGuest); // display the object
     var csrftoken = this.getCookie("csrftoken");
-    var url =
-      "http://ec2-18-188-160-47.us-east-2.compute.amazonaws.com/api/guest-create/"; // DRF create URL
+    var url = "https://www.turtle-api.net/api/guest-create/"; // DRF create URL
 
     if (this.state.activeGuest.nom === "") {
       this.setState({ errMsg: "Vous n'avez pas entré votre prénom et nom." });
@@ -144,15 +143,15 @@ export default class AttendFormR extends React.Component {
         }}
       >
         <h3>Merci, {self.state.guestname} !</h3>
-        <h3>Nous sommes très heureux de vous compter parmi nous.</h3>
-        <h3>A très bientôt!</h3>
+        <h3>
+          Nous sommes impatients de fêter cet évènement mémorable avec vous !
+        </h3>
       </div>
     );
     const seeYouAgain = (
       <div>
-        <h3>Merci, {self.state.guestname} !</h3>
-        <h4>Dommage !</h4>
-        <h4>Nous vous embrassons bien fort.</h4>
+        <h3>Quel dommage, {self.state.guestname} !</h3>
+        <h4>Nous vous embrassons quand même bien fort.</h4>
       </div>
     );
     return (
@@ -176,7 +175,7 @@ export default class AttendFormR extends React.Component {
           <div>
             <div className="card-rsvp-title">
               <p className="card-rsvp-title-p">
-                Veuillez répondre avant <br></br>le 3 juillet 2021
+                Nous attendons votre réponse <br></br>avant le 3 juillet 2021
               </p>
             </div>
 
@@ -206,7 +205,7 @@ export default class AttendFormR extends React.Component {
                 <div className="radio-group">
                   <label className="radio-button">
                     {" "}
-                    Sera présent(e)
+                    Assistera
                     <input
                       className="response"
                       type="radio"
@@ -218,7 +217,7 @@ export default class AttendFormR extends React.Component {
                     <span className="radio-form"></span>
                   </label>
                   <label className="radio-button">
-                    Ne sera pas présent(e)
+                    N'y pourra assister
                     <input
                       className="response"
                       onChange={self.handleChange}
@@ -234,7 +233,7 @@ export default class AttendFormR extends React.Component {
                 <span style={{ color: "red" }}>{self.state.errMsg}</span>
                 <p></p>
                 <button className="btnrsvp" type="submit" id="submit">
-                  RSVP
+                  Répondre
                 </button>
               </form>
             </div>

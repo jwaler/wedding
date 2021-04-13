@@ -1,5 +1,6 @@
 import "./../App.css";
 import React from "react";
+import insta from "./../static/img/insta.png";
 // import logo from "./../static/img/camb2.png";
 
 const NavBar = () => {
@@ -9,7 +10,7 @@ const NavBar = () => {
       .getElementById("navbarNavAltMarkup")
       .classList.replace("show", "hide");
   }
-  const logo = "Benjamin & Camille";
+  const logo = "Benjamin et Camille";
   return (
     <nav className="navbar mynavbar navbar-expand-lg navbar-light bg-light">
       <button
@@ -27,6 +28,11 @@ const NavBar = () => {
       {/* <img style={{ height: "40px" }} src={logo} alt="" /> */}
       {/* <b>{logo}</b> */}
       <div className="logo-couple">{logo}</div>
+      <div className="insta">
+        <a href="https://www.instagram.com/ben_cam_2022">
+          <img className="insta-logo" src={insta} alt={insta} />
+        </a>
+      </div>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="align-menu-link"></div>
         <div className="nav-main">
@@ -49,6 +55,11 @@ const NavBar = () => {
             RSVP
           </a>
         </div>
+      </div>
+      <div className="insta">
+        <a href="https://www.instagram.com/ben_cam_2022">
+          <img className="insta-large-screen" src={insta} alt={insta} />
+        </a>
       </div>
     </nav>
   );
