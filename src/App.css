@@ -311,11 +311,12 @@ PAGE DU BAS */
   margin-top: 10px;
 }
 input {
+  outline-width: 0;
   padding: 5px;
   border: none;
   color: black;
   border-radius: 10px;
-  background: rgba(121, 179, 255, 0.303);
+  background: rgb(197, 222, 255);
   border: solid 0.1rem rgb(177, 177, 177);
   -ms-transform: scale(1.4);
   -moz-transform: scale(1.4);
@@ -327,12 +328,17 @@ input {
   -o-transition: all 1s;
   transition: all 1s;
 }
+input::placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
 input:hover,
 input:active {
   outline-width: 0;
   padding: 5px;
-  border: solid 0.1rem white;
+  border: solid 0.1rem rgb(177, 177, 177);
   border-radius: 10px;
+  color: black;
   background: ghostwhite;
   -ms-transform: scale(1.4);
   -moz-transform: scale(1.4);
