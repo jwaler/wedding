@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/wedding/static/css/main.77b3cc05.chunk.css",
-    "main.js": "/wedding/static/js/main.79418fb0.chunk.js",
-    "main.js.map": "/wedding/static/js/main.79418fb0.chunk.js.map",
-    "runtime-main.js": "/wedding/static/js/runtime-main.07995063.js",
-    "runtime-main.js.map": "/wedding/static/js/runtime-main.07995063.js.map",
-    "static/js/2.1d77193d.chunk.js": "/wedding/static/js/2.1d77193d.chunk.js",
-    "static/js/2.1d77193d.chunk.js.map": "/wedding/static/js/2.1d77193d.chunk.js.map",
-    "static/js/3.9f8548e5.chunk.js": "/wedding/static/js/3.9f8548e5.chunk.js",
-    "static/js/3.9f8548e5.chunk.js.map": "/wedding/static/js/3.9f8548e5.chunk.js.map",
+    "main.css": "/wedding/static/css/main.9f766920.chunk.css",
+    "main.js": "/wedding/static/js/main.9fa0fff2.chunk.js",
+    "main.js.map": "/wedding/static/js/main.9fa0fff2.chunk.js.map",
+    "runtime-main.js": "/wedding/static/js/runtime-main.37ee5684.js",
+    "runtime-main.js.map": "/wedding/static/js/runtime-main.37ee5684.js.map",
+    "static/js/2.1e94dc38.chunk.js": "/wedding/static/js/2.1e94dc38.chunk.js",
+    "static/js/2.1e94dc38.chunk.js.map": "/wedding/static/js/2.1e94dc38.chunk.js.map",
+    "static/js/3.5f04fb1f.chunk.js": "/wedding/static/js/3.5f04fb1f.chunk.js",
+    "static/js/3.5f04fb1f.chunk.js.map": "/wedding/static/js/3.5f04fb1f.chunk.js.map",
     "index.html": "/wedding/index.html",
-    "static/css/main.77b3cc05.chunk.css.map": "/wedding/static/css/main.77b3cc05.chunk.css.map",
-    "static/js/2.1d77193d.chunk.js.LICENSE.txt": "/wedding/static/js/2.1d77193d.chunk.js.LICENSE.txt",
+    "static/css/main.9f766920.chunk.css.map": "/wedding/static/css/main.9f766920.chunk.css.map",
+    "static/js/2.1e94dc38.chunk.js.LICENSE.txt": "/wedding/static/js/2.1e94dc38.chunk.js.LICENSE.txt",
     "static/media/App.css": "/wedding/static/media/rsvp.2c0d8a43.jpg",
     "static/media/camb1.40726dd2.png": "/wedding/static/media/camb1.40726dd2.png",
     "static/media/camb2.0cdab1f0.png": "/wedding/static/media/camb2.0cdab1f0.png",
+    "static/media/insta.0963b7a5.png": "/wedding/static/media/insta.0963b7a5.png",
     "static/media/unnamed.213d855d.png": "/wedding/static/media/unnamed.213d855d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.07995063.js",
-    "static/js/2.1d77193d.chunk.js",
-    "static/css/main.77b3cc05.chunk.css",
-    "static/js/main.79418fb0.chunk.js"
+    "static/js/runtime-main.37ee5684.js",
+    "static/js/2.1e94dc38.chunk.js",
+    "static/css/main.9f766920.chunk.css",
+    "static/js/main.9fa0fff2.chunk.js"
   ]
 }
