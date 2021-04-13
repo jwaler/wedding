@@ -140,8 +140,8 @@ export default class App extends React.Component {
                   <div>le 03 Septembre 2021</div>
                   <p></p>
                   <div className="div-main-info-parties">
-                    <div>- À 15H30 à la mairie du XVIe arr. de Paris</div>
-                    <div>- Puis, à l'Automobile Club de France</div>
+                    <div>À 15H30 à la mairie du XVIe arr. de Paris</div>
+                    <div>Puis, à l'Automobile Club de France</div>
                   </div>
                   <p></p>
                   <div style={{ fontSize: "12px !important;" }}>
