@@ -99,10 +99,11 @@
   --font7: "Italianno", cursive;
   --font8: "Pinyon Script", cursive;
   --font9: "Cormorant", serif;
+  --font10: "Great Vibes", cursive;
 }
 html,
 body {
-  font-family: var(--font9);
+  font-family: var(--font10);
   font-size: 25px;
   background: white;
   scroll-behavior: smooth;
