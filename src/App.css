@@ -97,10 +97,11 @@
   --font5: "Lato", sans-serif;
   --font6: "English", arial;
   --font7: "Italianno", cursive;
+  --font8: "Pinyon Script", cursive;
 }
 html,
 body {
-  font-family: var(--font7);
+  font-family: var(--font8);
   font-size: 25px;
   background: white;
   scroll-behavior: smooth;
@@ -123,7 +124,6 @@ hr.side {
 }
 /* NAVIGATION */
 .mynavbar {
-  font-size: large !important;
   letter-spacing: 2px;
   background: rgb(255, 255, 255) !important;
   border-bottom: solid 0.1rem rgb(97, 97, 97) !important;
