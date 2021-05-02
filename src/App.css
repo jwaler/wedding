@@ -89,6 +89,20 @@
     );
   }
 }
+@font-face {
+  font-family: ITCBlair-Light;
+  src: url(https://www.epi1959.com/propeller/themes/propeller/assets/fonts/ITCBlair-Light.eot);
+  src: url(https://www.epi1959.com/propeller/themes/propeller/assets/fonts/ITCBlair-Light.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://www.epi1959.com/propeller/themes/propeller/assets/fonts/ITCBlair-Light.woff2)
+      format("woff2"),
+    url(https://www.epi1959.com/propeller/themes/propeller/assets/fonts/ITCBlair-Light.woff)
+      format("woff"),
+    url(https://www.epi1959.com/propeller/themes/propeller/assets/fonts/ITCBlair-Light.ttf)
+      format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
 :root {
   --font: "Kiwi Maru", serif;
   --font2: "Raleway", serif;
@@ -101,13 +115,13 @@
   --font9: "Cormorant", serif;
   --font10: "Cormorant Garamond", serif;
   --font11: "Libre Franklin", sans-serif;
-  --font12: "ITCBlair-Light", sans-serif;
+  --font12: "Quattrocento Sans", sans-serif;
   --font13: "Prata", serif;
   --font14: "Taviraj", serif;
 }
 html,
 body {
-  font-family: var(--font14);
+  font-family: var(--font12);
   font-size: 20px;
   background: white;
   scroll-behavior: smooth;
