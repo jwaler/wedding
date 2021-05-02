@@ -134,16 +134,13 @@ export default class App extends React.Component {
                   </h3>
                 </div>
                 <div className="text-card-one">
-                  <div>
-                    <h3>célèbrent leur Mariage </h3>{" "}
-                  </div>
-                  <div>le 03 Septembre 2021</div>
-                  <p></p>
+                  <h4>se marient </h4> <h4>le Vendredi 03 Septembre 2021</h4>
                   <div className="div-main-info-parties">
-                    <div>à 15H30 à la mairie du XVIe arr. de Paris</div>
+                    <div>
+                      à 15h30 à la mairie du XVIe arrondissement de Paris
+                    </div>
                     <div>puis, à l'Automobile Club de France</div>
                   </div>
-                  <p></p>
                   <div style={{ fontSize: "12px !important;" }}>
                     <form action="#programme">
                       <button type="submit" className="button-mairie-map">
