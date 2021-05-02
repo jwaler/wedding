@@ -134,7 +134,7 @@ export default class App extends React.Component {
                   </h3>
                 </div>
                 <div className="text-card-one">
-                  <h4>se marient </h4> <h4>le Vendredi 03 Septembre 2021</h4>
+                  <h3>SE MARIENT </h3> <h5>le Vendredi 03 Septembre 2021</h5>
                   <div className="div-main-info-parties">
                     <div>
                       à 15h30 à la mairie du XVIe arrondissement de Paris

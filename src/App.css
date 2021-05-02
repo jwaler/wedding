@@ -101,10 +101,13 @@
   --font9: "Cormorant", serif;
   --font10: "Cormorant Garamond", serif;
   --font11: "Libre Franklin", sans-serif;
+  --font12: "ITCBlair-Light", sans-serif;
+  --font13: "Prata", serif;
+  --font14: "Taviraj", serif;
 }
 html,
 body {
-  font-family: var(--font11);
+  font-family: var(--font14);
   font-size: 20px;
   background: white;
   scroll-behavior: smooth;
