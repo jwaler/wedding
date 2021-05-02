@@ -96,10 +96,12 @@
   --font4: "Josefin Sans", sans-serif;
   --font5: "Lato", sans-serif;
   --font6: "English", arial;
+  --font7: "Italianno", cursive;
 }
 html,
 body {
-  font-family: var(--font4);
+  font-family: var(--font7);
+  font-size: 25px;
   background: white;
   scroll-behavior: smooth;
 }
@@ -564,7 +566,6 @@ input:focus {
 @media (max-width: 600px) {
   .div-main-info-parties {
     text-align: center;
-    font-size: 15px;
     padding: 0 auto;
   }
   .card-two-prog-title {
@@ -572,7 +573,6 @@ input:focus {
   }
   .card-two-prog-location {
     margin-left: 20px;
-    font-size: 15px;
   }
   .card-rsvp-title {
     padding-bottom: 15px;
@@ -597,7 +597,6 @@ input:focus {
   }
   .core-text {
     text-align: left;
-    font-size: 15px !important;
     width: 100%;
     padding-left: 5px !important;
     display: inline-block;
@@ -747,7 +746,6 @@ input:focus {
   .card-two-prog-location {
     font-weight: lighter;
     margin-left: 50px;
-    font-size: 18px;
   }
   .card-rsvp-title {
     padding-bottom: 15px;
@@ -956,7 +954,6 @@ input:focus {
 }
 @media (max-width: 321px) {
   .logo-couple {
-    font-size: 15px;
     justify-content: center;
     margin: 0 auto;
     padding: 0 auto;
