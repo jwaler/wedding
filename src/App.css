@@ -442,20 +442,8 @@ ADDRESS UNDER MAP */
     object-fit: cover;
   }
   /* CAROUSEL LEGENDS */
-  .legend {
-    background-color: transparent !important;
-    font-size: 80% !important;
-    width: 100px;
-    height: 400px;
-    border-radius: 0 !important;
-    margin-bottom: 10px;
-    opacity: 1 !important;
-  }
-  .legend:hover {
-    opacity: 1 !important;
-  }
   .text-oncarousel {
-    font-size: auto;
+    font-size: 12px;
     margin-top: 250px !important;
     z-index: 1;
     color: white;
