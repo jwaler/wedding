@@ -20,7 +20,6 @@ body {
   font-family: var(--font15);
   font-size: 20px;
   background: white;
-  scroll-behavior: smooth;
 }
 hr {
   border: solid 0.1em white;
@@ -34,6 +33,9 @@ hr.side {
 }
 .App {
   height: 100%;
+}
+.link {
+  cursor: pointer;
 }
 #root {
   height: auto;
@@ -412,6 +414,10 @@ ADDRESS UNDER MAP */
   }
   .go-to-programme-link {
     cursor: pointer;
+    color: white;
+  }
+  .go-to-programme-link:hover {
+    color: white;
   }
   .merry-go-round-img {
     height: 520px;
@@ -567,7 +573,11 @@ ADDRESS UNDER MAP */
   }
   .go-to-programme-link {
     cursor: pointer;
+    color: white;
     font-size: 20px;
+  }
+  .go-to-programme-link:hover {
+    color: white;
   }
   .merry-go-round-img {
     height: 765px;
@@ -734,6 +744,10 @@ ADDRESS UNDER MAP */
   }
   .go-to-programme-link {
     cursor: pointer;
+    color: white;
+  }
+  .go-to-programme-link:hover {
+    color: white;
   }
   .merry-go-round-img {
     height: 765px;

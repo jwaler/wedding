@@ -1,5 +1,6 @@
 import "./App.css";
 import Observer from "@researchgate/react-intersection-observer";
+import { Link } from "react-scroll";
 import Timer from "./miniapps/clock.js";
 import NavBar from "./miniapps/navbar.js";
 import Cards from "./miniapps/card.js";
@@ -78,7 +79,7 @@ export default class App extends React.Component {
         {/* main container */}
         <div className="main-container">
           {/* CAROUSEL MAIN MENU */}
-          <div className="carousel-img-container">
+          <div className="carousel-img-container" id="home">
             <Carousel
               showArrows={true}
               autoPlay={true}
@@ -106,11 +107,16 @@ export default class App extends React.Component {
                     <br /> SE MARIENT<p></p>
                     LE VENDREDI 3 SEPTEMBRE 2021
                   </p>
-                  <p className="go-to-programme-link">
+                  <Link
+                    className="go-to-programme-link"
+                    to="programme"
+                    spy={true}
+                    smooth={true}
+                  >
                     PROGRAMME
                     <br />
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  </p>
+                  </Link>
                   <br />
                 </p>
               </div>
@@ -126,11 +132,16 @@ export default class App extends React.Component {
                     SE MARIENT<p></p>
                     LE VENDREDI 3 SEPTEMBRE 2021
                   </p>
-                  <p className="go-to-programme-link">
+                  <Link
+                    className="go-to-programme-link"
+                    to="programme"
+                    spy={true}
+                    smooth={true}
+                  >
                     PROGRAMME
                     <br />
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  </p>
+                  </Link>
                 </p>
               </div>
               <div>
@@ -145,11 +156,16 @@ export default class App extends React.Component {
                     <br /> SE MARIENT<p></p>
                     LE VENDREDI 3 SEPTEMBRE 2021
                   </p>
-                  <p className="go-to-programme-link">
+                  <Link
+                    className="go-to-programme-link"
+                    to="programme"
+                    spy={true}
+                    smooth={true}
+                  >
                     PROGRAMME
                     <br />
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  </p>
+                  </Link>
                 </p>
               </div>
             </Carousel>
@@ -198,7 +214,7 @@ export default class App extends React.Component {
 
           {/* Programme */}
           <Observer onChange={this.FadeInContentThree}>
-            <div className={`${this.state.visibilitythree}`}>
+            <div className={`${this.state.visibilitythree}`} id="programme">
               <div className="container-programme-row">
                 <p className="programme-title">PROGRAMME</p>
                 <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
@@ -210,7 +226,7 @@ export default class App extends React.Component {
 
           {/* RVSP */}
           <Observer onChange={this.FadeInContentFour}>
-            <div className={`${this.state.visibilityfour}`}>
+            <div className={`${this.state.visibilityfour}`} id="rsvp">
               <div id="rsvp" className="buffer-container">
                 <div className="rsvp-carousel">
                   <div className="span-text"></div>

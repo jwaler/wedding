@@ -1,6 +1,7 @@
 import "./../App.css";
 import React from "react";
 import insta from "./../static/img/insta.png";
+import { Link } from "react-scroll";
 // import logo from "./../static/img/camb2.png";
 
 const NavBar = () => {
@@ -36,14 +37,27 @@ const NavBar = () => {
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="align-menu-link"></div>
         <div className="nav-main">
-          <a href="#accueil" onClick={closeNav}>
+          <Link
+            className="link"
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            onClick={closeNav}
+          >
             ACCUEIL
-          </a>
+          </Link>
         </div>
         <div className="nav-main">
-          <a href="#programme" onClick={closeNav}>
+          <Link
+            className="link"
+            to="programme"
+            spy={true}
+            smooth={true}
+            onClick={closeNav}
+          >
             PROGRAMME
-          </a>
+          </Link>
         </div>
         <div className="nav-main">
           <a href="#liste-de-mariage" onClick={closeNav}>
@@ -51,9 +65,15 @@ const NavBar = () => {
           </a>
         </div>
         <div className="nav-main">
-          <a href="#rsvp" onClick={closeNav}>
+          <Link
+            className="link"
+            to="rsvp"
+            spy={true}
+            smooth={true}
+            onClick={closeNav}
+          >
             RSVP
-          </a>
+          </Link>
         </div>
       </div>
       <div className="insta">
