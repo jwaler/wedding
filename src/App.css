@@ -14,10 +14,13 @@
   --font13: "Prata", serif;
   --font14: "Taviraj", serif;
   --font15: "NTR", sans-serif;
+  --font16: "Jura", sans-serif;
+  /* 
+  questrial, red hat display, orbitron, jura */
 }
 html,
 body {
-  font-family: var(--font15);
+  font-family: var(--font16);
   font-size: 20px;
   background: white;
 }
@@ -287,6 +290,7 @@ input:focus {
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
+  font-weight: bold;
   background: transparent;
   border: solid 1px rgb(38, 38, 38);
   color: rgb(48, 48, 48);
@@ -472,6 +476,7 @@ ADDRESS UNDER MAP */
   }
   .card-two-prog-title {
     font-size: 20px;
+    font-weight: bold;
   }
   .card-two-prog-location {
     margin-left: 20px;
@@ -644,6 +649,7 @@ ADDRESS UNDER MAP */
   /* programme col 2 text div */
   .card-two-prog-title {
     font-size: 20px;
+    font-weight: bold;
   }
   .card-two-prog-location {
     font-size: 15px !important;
@@ -823,6 +829,7 @@ ADDRESS UNDER MAP */
   }
   .card-two-prog-title {
     font-size: 20px;
+    font-weight: bold;
   }
   .card-two-prog-location {
     font-size: 13px;
