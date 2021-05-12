@@ -403,6 +403,9 @@ ADDRESS UNDER MAP */
 
 /* MOBILE  */
 @media (max-width: 600px) {
+  .hashtag {
+    font-size: 12px;
+  }
   .breaking-news {
     font-size: 18px;
     width: auto;

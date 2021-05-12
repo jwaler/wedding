@@ -115,21 +115,21 @@ export default class App extends React.Component {
                   <img
                     src={img3}
                     className="merry-go-round-img"
-                    style={{ filter: "contrast(50%)" }}
+                    style={{ filter: "brightness(50%)" }}
                   />
                 </div>
                 <div>
                   <img
                     src={img1}
                     className="merry-go-round-img"
-                    style={{ filter: "contrast(50%)" }}
+                    style={{ filter: "brightness(50%)" }}
                   />
                 </div>
                 <div>
                   <img
                     src={img5}
                     className="merry-go-round-img"
-                    style={{ filter: "contrast(50%)" }}
+                    style={{ filter: "brightness(50%)" }}
                   />
                 </div>
               </Carousel>

@@ -76,6 +76,7 @@ const NavBar = () => {
           </Link>
         </div>
       </div>
+      <div className="hashtag">#benetcam22</div>
       <div className="insta">
         <a href="https://www.instagram.com/ben_cam_2022">
           <img className="insta-large-screen" src={insta} alt={insta} />
