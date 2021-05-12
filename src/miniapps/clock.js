@@ -47,13 +47,16 @@ const Timer = () => {
   return (
     <div className="row timer-row">
       <div className="col counter-col">
-        {timerDays} <h6>JOURS</h6>
+        <div className="datetimer">{timerDays} </div>
+        <div className="datetimerdesc">DAYS</div>
       </div>
       <div className="col counter-col">
-        {timerHours} <h6>HEURES</h6>
+        <div className="datetimer">{timerHours} </div>
+        <div className="datetimerdesc">HOURS</div>
       </div>
       <div className="col counter-col">
-        {timerMinutes} <h6>MINUTES</h6>
+        <div className="datetimer">{timerMinutes} </div>
+        <div className="datetimerdesc">MINUTES</div>
       </div>
     </div>
   );
