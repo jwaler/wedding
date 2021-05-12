@@ -12,7 +12,9 @@ function ContactPopover() {
   return (
     <div>
       <OverlayTrigger trigger="click" placement="top" overlay={ContactPopover}>
-        <Button variant="outline-dark">Créé par Jeremy Leroux</Button>
+        <Button variant="outline-dark" style={{ fontSize: "15px" }}>
+          CREE PAR JEREMY LEROUX
+        </Button>
       </OverlayTrigger>
       <p></p>
       <p></p>

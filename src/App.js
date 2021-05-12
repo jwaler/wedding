@@ -1,13 +1,19 @@
 import "./App.css";
+import Observer from "@researchgate/react-intersection-observer";
 import Timer from "./miniapps/clock.js";
 import NavBar from "./miniapps/navbar.js";
 import Cards from "./miniapps/card.js";
+import Programme from "./miniapps/programme.js";
 import AttendFormR from "./miniapps/form2.js";
 import ContactPopover from "./miniapps/footer.js";
-import Mapping from "./miniapps/map.js";
-import Mapping2 from "./miniapps/map-2.js";
 import React from "react";
-import AnimateHeight from "react-animate-height";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import img1 from "./static/img/background.jpg";
+import img2 from "./static/img/wedding.gif";
+import img3 from "./static/img/jardin.jpg";
+import img5 from "./static/img/acf-dessous.jpg";
+import img4 from "./static/img/rsvp.jpg";
 
 // Main WEBSITE
 export default class App extends React.Component {
@@ -15,90 +21,17 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       guestList: [],
-      toggleDiv: "",
-      toggleDiv2: "",
-      showMap1: false,
-      showMap2: false,
-      height: 0,
-      heightDiv2: 0,
+      visibilityone: "hidden",
+      visibilitytwo: "hidden",
+      visibilitythree: "hidden",
+      visibilityfour: "hidden",
     };
   }
 
   componentDidMount() {
-    this.setState({
-      toggleDiv: "",
-      showMap1: false,
-      showMap2: false,
-    });
+    this.setState({});
   }
 
-  rollMap2() {
-    this.state.toggleDiv2 !== ""
-      ? this.setState({
-          toggleDiv2: "",
-        })
-      : this.setState({
-          toggleDiv2: "open",
-        });
-    this.state.showMap2
-      ? this.setState({
-          showMap2: false,
-          toggleDiv2: "",
-          toggleDiv: "",
-        })
-      : setTimeout(() => {
-          this.setState({
-            showMap2: true,
-            showMap1: false,
-          });
-        }, 800);
-  }
-  dePloy() {
-    console.log("deploy");
-    const { height } = this.state;
-
-    this.setState({
-      height: height === 0 ? "auto" : 0,
-    });
-    if (height === 0) {
-      this.setState({
-        heightDiv2: 0,
-      });
-    }
-  }
-  maxdePloy() {
-    console.log("deploy");
-    const { heightDiv2 } = this.state;
-
-    this.setState({
-      heightDiv2: heightDiv2 === 0 ? "auto" : 0,
-    });
-    if (heightDiv2 === 0) {
-      this.setState({
-        height: 0,
-      });
-    }
-  }
-  rollMap() {
-    this.state.toggleDiv !== ""
-      ? this.setState({
-          toggleDiv: "",
-          toggleDiv2: "",
-        })
-      : this.setState({
-          toggleDiv: "open",
-        });
-    this.state.showMap1
-      ? this.setState({
-          showMap1: false,
-        })
-      : setTimeout(() => {
-          this.setState({
-            showMap1: true,
-            showMap2: false,
-          });
-        }, 800);
-  }
   fetchGuest() {
     console.log("Fetching");
     // fetch with DRF correct url (as if you were going to DRF view)
@@ -114,161 +47,170 @@ export default class App extends React.Component {
       )
     );
   }
+  FadeInContentOne = (event) => {
+    this.setState({
+      visibilityone: event.isIntersecting ? "visible" : "invisible",
+    });
+  };
+  FadeInContentTwo = (event) => {
+    this.setState({
+      visibilitytwo: event.isIntersecting ? "visible" : "invisible",
+    });
+  };
+  FadeInContentThree = (event) => {
+    this.setState({
+      visibilitythree: event.isIntersecting ? "visible" : "invisible",
+    });
+  };
+  FadeInContentFour = (event) => {
+    this.setState({
+      visibilityfour: event.isIntersecting ? "visible" : "invisible",
+    });
+  };
 
   render() {
-    const { height } = this.state;
-    const { heightDiv2 } = this.state;
     return (
       <div className="container-fluid">
         {/* Navbar */}
         <NavBar></NavBar>
+
         {/* main container */}
         <div className="main-container">
-          <div className="scroll-container">
-            {/* accueil */}
-            <div id="accueil" className="card-container">
-              <div id="main-info" className={this.state.toggleDiv}>
-                <div className="benji-cam">
-                  <h3 className="title-cards">
-                    Benjamin Leroux et Camille Chafey
-                  </h3>
-                </div>
-                <div className="text-card-one">
-                  <h3>SE MARIENT </h3> <h5>le Vendredi 03 Septembre 2021</h5>
-                  <div className="div-main-info-parties">
-                    <div>
-                      à 15h30 à la mairie du XVIe arrondissement de Paris
-                    </div>
-                    <div>puis, à l'Automobile Club de France</div>
-                  </div>
-                  <div style={{ fontSize: "12px !important;" }}>
-                    <form action="#programme">
-                      <button type="submit" className="button-mairie-map">
-                        Voir le programme
-                      </button>
-                    </form>
-                  </div>
-                </div>
-
-                {/* <button
-                    className="btnrsvp"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = "#rsvp";
-                    }}
-                  >
-                    RSVP
-                  </button> */}
+          {/* CAROUSEL MAIN MENU */}
+          <div className="carousel-img-container">
+            <Carousel
+              showArrows={true}
+              autoPlay={true}
+              autoFocus={true}
+              interval={5000}
+              emulateTouch={true}
+              infiniteLoop={true}
+              centerMode={false}
+              centerSlidePercentage={100}
+              showThumbs={false}
+              showIndicators={false}
+              stopOnHover={false}
+              showStatus={false}
+              transitionTime={1000}
+            >
+              <div>
+                <img
+                  src={img1}
+                  className="merry-go-round-img"
+                  style={{ filter: "contrast(70%)" }}
+                />
+                <p className="legend">
+                  <p className="breaking-news">
+                    BENJAMIN LEROUX ET CAMILLE CHAFEY SE MARIENT !
+                  </p>
+                  <p className="go-to-programme-link">
+                    PROGRAMME
+                    <br />
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                  </p>
+                </p>
               </div>
-            </div>
-
-            <div className="buffer-container">
-              <Timer></Timer>
-              <hr />
-              <Cards></Cards>
-            </div>
-
-            {/* Programme */}
-            <div id="programme" className="carousel-container">
-              <div id="programme-info" className={this.state.toggleDiv2}>
-                <div className="title">
-                  <h4 className="title-cards"> Vendredi 03 Septembre 2021</h4>
-                </div>
-                <div className="core-text">
-                  <p className="card-two-prog-title">
-                    <img
-                      className="img-ring"
-                      src="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-                      alt="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-                    />
-                    {"   "}
-                    15h30: Mariage Civil
+              <div>
+                <img
+                  src={img5}
+                  className="merry-go-round-img"
+                  style={{ filter: "contrast(70%)" }}
+                />
+                <p className="legend">
+                  <p className="breaking-news">
+                    BENJAMIN LEROUX ET CAMILLE CHAFEY SE MARIENT !
                   </p>
-                  <button
-                    aria-expanded={height !== 0}
-                    aria-controls="example-panel"
-                    onClick={() => this.dePloy()}
-                    className="button-prog-map"
-                  >
-                    <i className="fas fa-map-marker-alt"></i> À la mairie du
-                    XVIème arr. de Paris
-                  </button>
-                  <hr className="side"></hr>
-                  <div style={{ width: "98%" }}>
-                    <AnimateHeight
-                      id="example-panel"
-                      duration={1500}
-                      height={height} // see props documentation below
-                    >
-                      <Mapping></Mapping>
-                    </AnimateHeight>
-                  </div>
-
-                  <p></p>
-                  <p></p>
-                  <p className="card-two-prog-title">
-                    <i className="fas fa-cocktail mr-2"></i> 18h30: Cocktail
+                  <p className="go-to-programme-link">
+                    PROGRAMME
+                    <br />
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
                   </p>
-                  <div className="card-two-prog-location">
-                    <i className="fas fa-map-marker-alt"></i> Sur le toit de
-                    l'Automobile Club de France
-                  </div>
-                  <div className="card-two-prog-location">
-                    (Jardin des frères Renault)
-                  </div>
-                  <p></p>
-                  <p className="card-two-prog-title">
-                    <img
-                      className="img-ring"
-                      src="https://image.flaticon.com/icons/png/512/16/16707.png"
-                      alt="https://image.flaticon.com/icons/png/512/16/16707.png"
-                    />{" "}
-                    21h00: Dîner
-                  </p>
-                  <p className="card-two-prog-location">
-                    <i className="fas fa-map-marker-alt"></i> Dans les salons
-                    Concorde
-                  </p>
-
-                  <p className="card-two-prog-title">
-                    <i className="fas fa-music mr-2"></i> 23h30: Soirée dansante
-                  </p>
-                  <p className="card-two-prog-location">
-                    <i className="fas fa-map-marker-alt"></i> Dans les salons
-                    Concorde
-                  </p>
-                  <p>
-                    <button
-                      className="button-prog-map"
-                      onClick={() => this.maxdePloy()}
-                    >
-                      <i className="fas fa-map-marker-alt"> </i> À l'Automobile
-                      Club de France
-                    </button>
-                  </p>
-                  <div style={{ width: "98%" }}>
-                    <AnimateHeight
-                      id="example-panel"
-                      duration={1500}
-                      height={heightDiv2} // see props documentation below
-                    >
-                      <Mapping2></Mapping2>
-                    </AnimateHeight>
-                  </div>
-                </div>
+                </p>
               </div>
-            </div>
-
-            <div className="buffer-container"></div>
-
-            {/* RVSP */}
-            <div id="rsvp" className="rsvp-container">
-              <div className="rsvp-carousel">
-                <div className="span-text"></div>
-                <AttendFormR></AttendFormR>
+              <div>
+                <img
+                  src={img3}
+                  className="merry-go-round-img"
+                  style={{ filter: "contrast(50%)" }}
+                />
+                <p className="legend">
+                  <p className="breaking-news">
+                    BENJAMIN LEROUX ET CAMILLE CHAFEY SE MARIENT !
+                  </p>
+                  <p className="go-to-programme-link">
+                    PROGRAMME
+                    <br />
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                  </p>
+                  <br />
+                </p>
               </div>
-            </div>
+            </Carousel>
           </div>
+
+          {/* TIMER + PHOTOS */}
+          <div className="buffer-container">
+            <Observer onChange={this.FadeInContentOne}>
+              <div className={`${this.state.visibilityone}`}>
+                <Timer></Timer>
+                <br />
+                <Cards></Cards>
+              </div>
+            </Observer>
+          </div>
+
+          {/* VIDEO */}
+          <Observer onChange={this.FadeInContentTwo}>
+            <div className={`${this.state.visibilitytwo}`}>
+              <Carousel
+                showArrows={true}
+                autoPlay={true}
+                autoFocus={true}
+                interval={5000}
+                emulateTouch={true}
+                infiniteLoop={true}
+                centerMode={false}
+                centerSlidePercentage={110}
+                showThumbs={false}
+                showIndicators={false}
+                stopOnHover={false}
+                showStatus={false}
+                transitionTime={1000}
+              >
+                <div className="img-container-scroll">
+                  <img
+                    src={img2}
+                    className="merry-go-round-img-scroll"
+                    style={{ filter: "contrast(50%)" }}
+                  />
+                  <p className="legend"></p>
+                </div>
+              </Carousel>
+            </div>
+          </Observer>
+
+          {/* Programme */}
+          <Observer onChange={this.FadeInContentThree}>
+            <div className={`${this.state.visibilitythree}`}>
+              <div className="container-programme-row">
+                <p className="programme-title">PROGRAMME</p>
+                <p></p>
+                <Programme></Programme>
+              </div>
+            </div>
+          </Observer>
+
+          {/* RVSP */}
+          <Observer onChange={this.FadeInContentFour}>
+            <div className={`${this.state.visibilityfour}`}>
+              <div id="rsvp" className="buffer-container">
+                <div className="rsvp-carousel">
+                  <div className="span-text"></div>
+                  <AttendFormR></AttendFormR>
+                </div>
+              </div>
+            </div>
+          </Observer>
         </div>
         {/* FIN CONTAINER */}
         <div className="footer-container" style={{ marginBottom: "200px" }}>

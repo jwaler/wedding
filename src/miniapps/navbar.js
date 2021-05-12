@@ -10,7 +10,7 @@ const NavBar = () => {
       .getElementById("navbarNavAltMarkup")
       .classList.replace("show", "hide");
   }
-  const logo = "Benjamin et Camille";
+  const logo = "BENJAMIN ET CAMILLE";
   return (
     <nav className="navbar mynavbar navbar-expand-lg navbar-light bg-light">
       <button
@@ -37,17 +37,17 @@ const NavBar = () => {
         <div className="align-menu-link"></div>
         <div className="nav-main">
           <a href="#accueil" onClick={closeNav}>
-            Accueil
+            ACCUEIL
           </a>
         </div>
         <div className="nav-main">
           <a href="#programme" onClick={closeNav}>
-            Programme
+            PROGRAMME
           </a>
         </div>
         <div className="nav-main">
           <a href="#liste-de-mariage" onClick={closeNav}>
-            Liste de Mariage
+            LISTE DE MARIAGE
           </a>
         </div>
         <div className="nav-main">

@@ -85,13 +85,13 @@ export default class AttendFormR extends React.Component {
     var url = "https://www.turtle-api.net/api/guest-create/"; // DRF create URL
 
     if (this.state.activeGuest.nom === "") {
-      this.setState({ errMsg: "Vous n'avez pas entré votre prénom et nom." });
+      this.setState({ errMsg: "VOUS N'AVEZ PAS ENTRE VOTRE PRENOM ET NOM." });
     } else if (this.state.activeGuest.email === "") {
-      this.setState({ errMsg: "Vous n'avez pas entré votre email." });
+      this.setState({ errMsg: "VOUS N'AVEZ PAS ENTRE VOTRE EMAIL." });
     } else if (!this.state.activeGuest.email.match(specialCharacter)) {
-      this.setState({ errMsg: "Votre email n'est pas valide." });
+      this.setState({ errMsg: "VOTRE EMAIL N'EST PAS VALIDE." });
     } else if (this.state.activeGuest.attend === "") {
-      this.setState({ errMsg: "Il manque votre réponse." });
+      this.setState({ errMsg: "IL MANQUE VOTRE REPONSE." });
     } else {
       fetch(url, {
         method: "POST",
@@ -175,7 +175,7 @@ export default class AttendFormR extends React.Component {
           <div>
             <div className="card-rsvp-title">
               <p className="card-rsvp-title-p">
-                Nous attendons votre réponse <br></br>avant le 3 juillet 2021
+                NOUS ATTENDONS VOTRE REPONSE <br></br>AVANT LE 3 JUILLET 2021
               </p>
             </div>
 
@@ -187,7 +187,7 @@ export default class AttendFormR extends React.Component {
                     id="name"
                     name="name"
                     type="input"
-                    placeholder="Prénom et Nom"
+                    placeholder="PRENOM ET NOM"
                     value={this.state.activeGuest.nom}
                     onChange={self.handleChange}
                   ></input>
@@ -197,7 +197,7 @@ export default class AttendFormR extends React.Component {
                   <input
                     className="email"
                     type="input"
-                    placeholder="Votre Email"
+                    placeholder="VOTRE EMAIL"
                     value={this.state.activeGuest.email}
                     onChange={self.handleChange}
                   ></input>
@@ -205,7 +205,7 @@ export default class AttendFormR extends React.Component {
                 <div className="radio-group">
                   <label className="radio-button">
                     {" "}
-                    Assistera
+                    ASSISTERA
                     <input
                       className="response"
                       type="radio"
@@ -217,7 +217,7 @@ export default class AttendFormR extends React.Component {
                     <span className="radio-form"></span>
                   </label>
                   <label className="radio-button">
-                    N'y pourra assister
+                    NE POURRA ASSISTER
                     <input
                       className="response"
                       onChange={self.handleChange}
@@ -230,10 +230,12 @@ export default class AttendFormR extends React.Component {
                   </label>
                 </div>
                 <p></p>
-                <span style={{ color: "red" }}>{self.state.errMsg}</span>
+                <span style={{ color: "red", fontSize: "15px" }}>
+                  {self.state.errMsg}
+                </span>
                 <p></p>
                 <button className="btnrsvp" type="submit" id="submit">
-                  Répondre
+                  REPONDRE
                 </button>
               </form>
             </div>

@@ -32,7 +32,8 @@ function AttendForm() {
       <h4>Nous vous embrassons bien fort.</h4>
     </div>
   );
-  const specialCharacter = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
+  const specialCharacter =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
   async function saveData() {
     if (guest === "") {
       setErrMsg("Vous n'avez pas entré votre prénom et nom.");

@@ -10,12 +10,15 @@ class Mapping2 extends React.Component {
     <a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:330px;width:100%;}</style>
     </div></div>`;
     return (
-      <div className="content">
-        <hr className="side"></hr>
+      <div>
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: output }}
         ></div>
+        <hr className="side"></hr>
+        <div className="address">6 PLACE DE LA CONCORDE</div>
+        <div className="address">75008 PARIS</div>
+        <div className="address">FRANCE</div>
         <hr className="side"></hr>
       </div>
     );

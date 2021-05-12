@@ -25,6 +25,10 @@ class Mapping extends React.Component {
           dangerouslySetInnerHTML={{ __html: output }}
         ></div>
         <hr className="side"></hr>
+        <div className="address">71 AVENUE HENRI MARTIN</div>
+        <div className="address">75016 PARIS</div>
+        <div className="address">FRANCE</div>
+        <hr className="side"></hr>
       </div>
     );
   }
