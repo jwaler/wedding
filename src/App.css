@@ -373,20 +373,6 @@ input:focus {
   margin-right: 7px;
 }
 
-/* CAROUSEL LEGENDS */
-.legend {
-  background-color: transparent !important;
-  font-size: 80% !important;
-  width: 100px;
-  height: 500px;
-  border-radius: 0 !important;
-  margin-bottom: 10px;
-  opacity: 1 !important;
-}
-.legend:hover {
-  opacity: 1 !important;
-}
-
 /* REACT JAVASCRIPT FADE IN AND FADE OUT EFFECTS */
 .invisible {
   opacity: 0;
@@ -422,13 +408,13 @@ ADDRESS UNDER MAP */
     width: auto;
     margin: 0 auto;
     padding: 10px;
-    margin-bottom: 350px;
+    margin-bottom: 250px;
   }
   .go-to-programme-link {
     cursor: pointer;
   }
   .merry-go-round-img {
-    height: 650px;
+    height: 520px;
     overflow: hidden;
     object-fit: cover;
   }
@@ -436,6 +422,19 @@ ADDRESS UNDER MAP */
     position: sticky;
     height: 600px;
     object-fit: cover;
+  }
+  /* CAROUSEL LEGENDS */
+  .legend {
+    background-color: transparent !important;
+    font-size: 80% !important;
+    width: 100px;
+    height: 400px;
+    border-radius: 0 !important;
+    margin-bottom: 10px;
+    opacity: 1 !important;
+  }
+  .legend:hover {
+    opacity: 1 !important;
   }
   /* programme */
   .programme-title {
@@ -579,6 +578,19 @@ ADDRESS UNDER MAP */
     position: sticky;
     height: 600px;
     object-fit: cover;
+  }
+  /* CAROUSEL LEGENDS */
+  .legend {
+    background-color: transparent !important;
+    font-size: 80% !important;
+    width: 100px;
+    height: 500px;
+    border-radius: 0 !important;
+    margin-bottom: 10px;
+    opacity: 1 !important;
+  }
+  .legend:hover {
+    opacity: 1 !important;
   }
   .programme-img-col {
     max-height: 480px;
@@ -732,6 +744,19 @@ ADDRESS UNDER MAP */
     position: sticky;
     height: 600px;
     object-fit: cover;
+  }
+  /* CAROUSEL LEGENDS */
+  .legend {
+    background-color: transparent !important;
+    font-size: 80% !important;
+    width: 100px;
+    height: 500px;
+    border-radius: 0 !important;
+    margin-bottom: 10px;
+    opacity: 1 !important;
+  }
+  .legend:hover {
+    opacity: 1 !important;
   }
   /* programme */
   .programme-title {

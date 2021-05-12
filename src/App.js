@@ -30,6 +30,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.setState({});
+    window.scrollTo(0, 0);
   }
 
   fetchGuest() {
@@ -82,8 +83,8 @@ export default class App extends React.Component {
               showArrows={true}
               autoPlay={true}
               autoFocus={true}
-              interval={5000}
-              emulateTouch={false}
+              interval={7000}
+              emulateTouch={true}
               infiniteLoop={true}
               centerMode={false}
               centerSlidePercentage={100}
@@ -93,6 +94,26 @@ export default class App extends React.Component {
               showStatus={false}
               transitionTime={1000}
             >
+              <div>
+                <img
+                  src={img3}
+                  className="merry-go-round-img"
+                  style={{ filter: "contrast(50%)" }}
+                />
+                <p className="legend">
+                  <p className="breaking-news">
+                    BENJAMIN LEROUX ET CAMILLE CHAFEY
+                    <br /> SE MARIENT<p></p>
+                    LE VENDREDI 3 SEPTEMBRE 2021
+                  </p>
+                  <p className="go-to-programme-link">
+                    PROGRAMME
+                    <br />
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                  </p>
+                  <br />
+                </p>
+              </div>
               <div>
                 <img
                   src={img1}
@@ -129,26 +150,6 @@ export default class App extends React.Component {
                     <br />
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                   </p>
-                </p>
-              </div>
-              <div>
-                <img
-                  src={img3}
-                  className="merry-go-round-img"
-                  style={{ filter: "contrast(50%)" }}
-                />
-                <p className="legend">
-                  <p className="breaking-news">
-                    BENJAMIN LEROUX ET CAMILLE CHAFEY
-                    <br /> SE MARIENT<p></p>
-                    LE VENDREDI 3 SEPTEMBRE 2021
-                  </p>
-                  <p className="go-to-programme-link">
-                    PROGRAMME
-                    <br />
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  </p>
-                  <br />
                 </p>
               </div>
             </Carousel>
