@@ -72,176 +72,181 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        {/* Navbar */}
+      <div>
         <NavBar></NavBar>
-
-        {/* main container */}
-        <div className="main-container">
-          {/* CAROUSEL MAIN MENU */}
-          <div className="carousel-img-container" id="home">
-            <Carousel
-              showArrows={true}
-              autoPlay={true}
-              autoFocus={true}
-              interval={7000}
-              emulateTouch={true}
-              infiniteLoop={true}
-              centerMode={false}
-              centerSlidePercentage={100}
-              showThumbs={false}
-              showIndicators={false}
-              stopOnHover={false}
-              showStatus={false}
-              transitionTime={1000}
-            >
-              <div>
-                <img
-                  src={img3}
-                  className="merry-go-round-img"
-                  style={{ filter: "contrast(50%)" }}
-                />
-                <p className="legend">
-                  <p className="breaking-news">
-                    BENJAMIN LEROUX ET CAMILLE CHAFEY
-                    <br /> SE MARIENT<p></p>
-                    LE VENDREDI 3 SEPTEMBRE 2021
-                  </p>
-                  <Link
-                    className="go-to-programme-link"
-                    to="programme"
-                    spy={true}
-                    smooth={true}
-                  >
-                    PROGRAMME
-                    <br />
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  </Link>
-                  <br />
-                </p>
-              </div>
-              <div>
-                <img
-                  src={img1}
-                  className="merry-go-round-img"
-                  style={{ filter: "contrast(50%)" }}
-                />
-                <p className="legend">
-                  <p className="breaking-news">
-                    BENJAMIN LEROUX ET CAMILLE CHAFEY <br />
-                    SE MARIENT<p></p>
-                    LE VENDREDI 3 SEPTEMBRE 2021
-                  </p>
-                  <Link
-                    className="go-to-programme-link"
-                    to="programme"
-                    spy={true}
-                    smooth={true}
-                  >
-                    PROGRAMME
-                    <br />
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  </Link>
-                </p>
-              </div>
-              <div>
-                <img
-                  src={img5}
-                  className="merry-go-round-img"
-                  style={{ filter: "contrast(50%)" }}
-                />
-                <p className="legend">
-                  <p className="breaking-news">
-                    BENJAMIN LEROUX ET CAMILLE CHAFEY
-                    <br /> SE MARIENT<p></p>
-                    LE VENDREDI 3 SEPTEMBRE 2021
-                  </p>
-                  <Link
-                    className="go-to-programme-link"
-                    to="programme"
-                    spy={true}
-                    smooth={true}
-                  >
-                    PROGRAMME
-                    <br />
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                  </Link>
-                </p>
-              </div>
-            </Carousel>
-          </div>
-
-          {/* TIMER + PHOTOS */}
-          <div className="buffer-container">
-            <Observer onChange={this.FadeInContentOne}>
-              <div className={`${this.state.visibilityone}`}>
-                <Timer></Timer>
-                <br />
-                <Cards></Cards>
-              </div>
-            </Observer>
-          </div>
-
-          {/* VIDEO */}
-          <Observer onChange={this.FadeInContentTwo}>
-            <div className={`${this.state.visibilitytwo}`}>
+        <div className="container-fluid">
+          {/* Navbar */}
+          {/* main container */}
+          <div className="main-container" id="home">
+            {/* CAROUSEL MAIN MENU */}
+            <div className="carousel-img-container">
               <Carousel
                 showArrows={true}
                 autoPlay={true}
                 autoFocus={true}
-                interval={5000}
+                interval={7000}
                 emulateTouch={true}
                 infiniteLoop={true}
                 centerMode={false}
-                centerSlidePercentage={110}
+                centerSlidePercentage={100}
                 showThumbs={false}
                 showIndicators={false}
                 stopOnHover={false}
                 showStatus={false}
                 transitionTime={1000}
               >
-                <div className="img-container-scroll">
+                <div>
                   <img
-                    src={img2}
-                    className="merry-go-round-img-scroll"
+                    src={img3}
+                    className="merry-go-round-img"
                     style={{ filter: "contrast(50%)" }}
                   />
-                  <p className="legend"></p>
+                  <p className="legend">
+                    <p className="breaking-news">
+                      BENJAMIN LEROUX ET CAMILLE CHAFEY
+                      <br /> SE MARIENT<p></p>
+                      LE VENDREDI 3 SEPTEMBRE 2021
+                    </p>
+                    <Link
+                      className="go-to-programme-link"
+                      to="programme"
+                      spy={true}
+                      smooth={true}
+                    >
+                      PROGRAMME
+                      <br />
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </Link>
+                    <br />
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={img1}
+                    className="merry-go-round-img"
+                    style={{ filter: "contrast(50%)" }}
+                  />
+                  <p className="legend">
+                    <p className="breaking-news">
+                      BENJAMIN LEROUX ET CAMILLE CHAFEY <br />
+                      SE MARIENT<p></p>
+                      LE VENDREDI 3 SEPTEMBRE 2021
+                    </p>
+                    <Link
+                      className="go-to-programme-link"
+                      to="programme"
+                      spy={true}
+                      smooth={true}
+                    >
+                      PROGRAMME
+                      <br />
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </Link>
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={img5}
+                    className="merry-go-round-img"
+                    style={{ filter: "contrast(50%)" }}
+                  />
+                  <p className="legend">
+                    <p className="breaking-news">
+                      BENJAMIN LEROUX ET CAMILLE CHAFEY
+                      <br /> SE MARIENT<p></p>
+                      LE VENDREDI 3 SEPTEMBRE 2021
+                    </p>
+                    <Link
+                      className="go-to-programme-link"
+                      to="programme"
+                      spy={true}
+                      smooth={true}
+                    >
+                      PROGRAMME
+                      <br />
+                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </Link>
+                  </p>
                 </div>
               </Carousel>
             </div>
-          </Observer>
 
-          {/* Programme */}
-          <Observer onChange={this.FadeInContentThree}>
-            <div className={`${this.state.visibilitythree}`} id="programme">
-              <div className="container-programme-row">
-                <p className="programme-title">PROGRAMME</p>
-                <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
-                <p></p>
-                <Programme></Programme>
-              </div>
+            {/* TIMER + PHOTOS */}
+            <div className="buffer-container">
+              <Observer onChange={this.FadeInContentOne}>
+                <div className={`${this.state.visibilityone}`}>
+                  <Timer></Timer>
+                  <br />
+                  <Cards></Cards>
+                </div>
+              </Observer>
             </div>
-          </Observer>
 
-          {/* RVSP */}
-          <Observer onChange={this.FadeInContentFour}>
-            <div className={`${this.state.visibilityfour}`} id="rsvp">
-              <div id="rsvp" className="buffer-container">
-                <div className="rsvp-carousel">
-                  <div className="span-text"></div>
-                  <AttendFormR></AttendFormR>
+            {/* VIDEO */}
+            <Observer onChange={this.FadeInContentTwo}>
+              <div
+                className={`${this.state.visibilitytwo}`}
+                style={{ marginBottom: "100px" }}
+              >
+                <Carousel
+                  showArrows={true}
+                  autoPlay={true}
+                  autoFocus={true}
+                  interval={5000}
+                  emulateTouch={true}
+                  infiniteLoop={true}
+                  centerMode={false}
+                  centerSlidePercentage={110}
+                  showThumbs={false}
+                  showIndicators={false}
+                  stopOnHover={false}
+                  showStatus={false}
+                  transitionTime={1000}
+                >
+                  <div className="img-container-scroll">
+                    <img
+                      src={img2}
+                      className="merry-go-round-img-scroll"
+                      style={{ filter: "contrast(50%)" }}
+                    />
+                    <p className="legend"></p>
+                  </div>
+                </Carousel>
+              </div>
+            </Observer>
+
+            {/* Programme */}
+            <div id="programme"></div>
+            <Observer onChange={this.FadeInContentThree}>
+              <div className={`${this.state.visibilitythree}`}>
+                <div className="container-programme-row">
+                  <p className="programme-title">PROGRAMME</p>
+                  <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
+                  <p></p>
+                  <Programme></Programme>
                 </div>
               </div>
-            </div>
-          </Observer>
-        </div>
-        {/* FIN CONTAINER */}
-        <div className="footer-container" style={{ marginBottom: "200px" }}>
-          <div className="row timer-row">
-            <div className="footer-info">
-              <ContactPopover></ContactPopover>
-              <p></p>
+            </Observer>
+            <div id="rsvp"></div>
+            {/* RVSP */}
+            <Observer onChange={this.FadeInContentFour}>
+              <div className={`${this.state.visibilityfour}`}>
+                <div id="rsvp" className="buffer-container">
+                  <div className="rsvp-carousel">
+                    <div className="span-text"></div>
+                    <AttendFormR></AttendFormR>
+                  </div>
+                </div>
+              </div>
+            </Observer>
+          </div>
+          {/* FIN CONTAINER */}
+          <div className="footer-container">
+            <div className="row timer-row">
+              <div className="footer-info">
+                <ContactPopover></ContactPopover>
+                <p></p>
+              </div>
             </div>
           </div>
         </div>
