@@ -73,14 +73,7 @@ export default class Programme extends React.Component {
           </div>
           <div className="col-6 programme-col">
             <div className="core-text">
-              <p className="card-two-prog-title">
-                <img
-                  className="img-ring"
-                  src="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-                  alt="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-                />
-                {"   "}15h30: MARIAGE CIVIL
-              </p>
+              <p className="card-two-prog-title">15h30: MARIAGE CIVIL</p>
               <p></p>
               <button
                 aria-expanded={height !== 0}
@@ -101,9 +94,7 @@ export default class Programme extends React.Component {
           <div className="col-6 programme-col">
             <p></p>
             <div className="core-text">
-              <p className="card-two-prog-title">
-                <i className="fas fa-cocktail mr-2"></i> 18h30: COCKTAIL
-              </p>
+              <p className="card-two-prog-title">18h30: COCKTAIL</p>
               <div className="card-two-prog-location">
                 <i className="fas fa-map-marker-alt"></i> SUR LE TOIT DE
                 L'AUTOMOBILE CLUB DE FRANCE
@@ -112,21 +103,12 @@ export default class Programme extends React.Component {
                 (JARDIN DES FRERES RENAULT)
               </div>
               <p></p>
-              <p className="card-two-prog-title">
-                <img
-                  className="img-ring"
-                  src="https://image.flaticon.com/icons/png/512/16/16707.png"
-                  alt="https://image.flaticon.com/icons/png/512/16/16707.png"
-                />{" "}
-                21h00: DINER
-              </p>
+              <p className="card-two-prog-title">21h00: DINER</p>
               <p className="card-two-prog-location">
                 <i className="fas fa-map-marker-alt"></i> DANS LES SALONS
                 CONCORDE
               </p>
-              <p className="card-two-prog-title">
-                <i className="fas fa-music mr-2"></i> 23h30: SOIREE DANSANTE
-              </p>
+              <p className="card-two-prog-title">23h30: SOIREE DANSANTE</p>
               <p className="card-two-prog-location">
                 <i className="fas fa-map-marker-alt"></i> DANS LES SALONS
                 CONCORDE
