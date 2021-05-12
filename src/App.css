@@ -440,6 +440,17 @@ ADDRESS UNDER MAP */
   .legend:hover {
     opacity: 1 !important;
   }
+  .text-oncarousel {
+    margin-top: 250px !important;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .space-div {
+    margin-bottom: 100px;
+  }
   /* programme */
   .programme-title {
     text-align: center;
@@ -614,6 +625,7 @@ ADDRESS UNDER MAP */
     font-size: 12px !important;
     overflow: hidden;
   }
+
   /* programme col 1 img settings */
   .img-programme {
     width: 100%;
@@ -660,6 +672,17 @@ ADDRESS UNDER MAP */
   .carousel-img-container {
     margin-left: 30px;
     margin-right: 30px;
+  }
+  .text-oncarousel {
+    margin-top: 250px !important;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .space-div {
+    margin-bottom: 320px;
   }
   .container-programme-row {
     margin: 0 auto;
@@ -770,6 +793,17 @@ ADDRESS UNDER MAP */
   }
   .legend:hover {
     opacity: 1 !important;
+  }
+  .text-oncarousel {
+    margin-top: 250px !important;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .space-div {
+    margin-bottom: 320px;
   }
   /* programme */
   .programme-title {

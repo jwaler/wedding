@@ -79,99 +79,60 @@ export default class App extends React.Component {
           {/* main container */}
           <div className="main-container" id="home">
             {/* CAROUSEL MAIN MENU */}
+            <div className="text-oncarousel">
+              BENJAMIN LEROUX ET CAMILLE CHAFEY
+              <br /> SE MARIENT<p></p>
+              LE VENDREDI 3 SEPTEMBRE 2021
+              <div className="space-div"></div>
+              <Link
+                className="go-to-programme-link"
+                to="programme"
+                spy={true}
+                smooth={true}
+              >
+                PROGRAMME
+                <br />
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </Link>
+            </div>
             <div className="carousel-img-container">
-              <div style={{ position: "relative" }}>
-                <div style={{ position: "absolute" }}>TEXT</div>
-                <Carousel
-                  showArrows={true}
-                  autoPlay={true}
-                  autoFocus={true}
-                  interval={7000}
-                  emulateTouch={true}
-                  infiniteLoop={true}
-                  centerMode={false}
-                  centerSlidePercentage={90}
-                  showThumbs={false}
-                  showIndicators={false}
-                  stopOnHover={false}
-                  showStatus={false}
-                  transitionTime={1000}
-                >
-                  <div>
-                    <img
-                      src={img3}
-                      className="merry-go-round-img"
-                      style={{ filter: "contrast(50%)" }}
-                    />
-                    <p className="legend">
-                      <p className="breaking-news">
-                        BENJAMIN LEROUX ET CAMILLE CHAFEY
-                        <br /> SE MARIENT<p></p>
-                        LE VENDREDI 3 SEPTEMBRE 2021
-                      </p>
-                      <Link
-                        className="go-to-programme-link"
-                        to="programme"
-                        spy={true}
-                        smooth={true}
-                      >
-                        PROGRAMME
-                        <br />
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                      </Link>
-                      <br />
-                    </p>
-                  </div>
-                  <div>
-                    <img
-                      src={img1}
-                      className="merry-go-round-img"
-                      style={{ filter: "contrast(50%)" }}
-                    />
-                    <p className="legend">
-                      <p className="breaking-news">
-                        BENJAMIN LEROUX ET CAMILLE CHAFEY <br />
-                        SE MARIENT<p></p>
-                        LE VENDREDI 3 SEPTEMBRE 2021
-                      </p>
-                      <Link
-                        className="go-to-programme-link"
-                        to="programme"
-                        spy={true}
-                        smooth={true}
-                      >
-                        PROGRAMME
-                        <br />
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                      </Link>
-                    </p>
-                  </div>
-                  <div>
-                    <img
-                      src={img5}
-                      className="merry-go-round-img"
-                      style={{ filter: "contrast(50%)" }}
-                    />
-                    <p className="legend">
-                      <p className="breaking-news">
-                        BENJAMIN LEROUX ET CAMILLE CHAFEY
-                        <br /> SE MARIENT<p></p>
-                        LE VENDREDI 3 SEPTEMBRE 2021
-                      </p>
-                      <Link
-                        className="go-to-programme-link"
-                        to="programme"
-                        spy={true}
-                        smooth={true}
-                      >
-                        PROGRAMME
-                        <br />
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                      </Link>
-                    </p>
-                  </div>
-                </Carousel>
-              </div>
+              <Carousel
+                showArrows={true}
+                autoPlay={true}
+                autoFocus={true}
+                interval={7000}
+                emulateTouch={true}
+                infiniteLoop={true}
+                centerMode={false}
+                centerSlidePercentage={90}
+                showThumbs={false}
+                showIndicators={false}
+                stopOnHover={false}
+                showStatus={false}
+                transitionTime={1000}
+              >
+                <div>
+                  <img
+                    src={img3}
+                    className="merry-go-round-img"
+                    style={{ filter: "contrast(50%)" }}
+                  />
+                </div>
+                <div>
+                  <img
+                    src={img1}
+                    className="merry-go-round-img"
+                    style={{ filter: "contrast(50%)" }}
+                  />
+                </div>
+                <div>
+                  <img
+                    src={img5}
+                    className="merry-go-round-img"
+                    style={{ filter: "contrast(50%)" }}
+                  />
+                </div>
+              </Carousel>
             </div>
 
             {/* TIMER + PHOTOS */}
