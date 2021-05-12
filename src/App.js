@@ -80,8 +80,10 @@ export default class App extends React.Component {
           <div className="main-container" id="home">
             {/* CAROUSEL MAIN MENU */}
             <div className="text-oncarousel">
-              BENJAMIN LEROUX ET CAMILLE CHAFEY
-              <br /> SE MARIENT<p></p>
+              <div className="benetcam">BENJAMIN LEROUX ET CAMILLE CHAFEY</div>
+              <p></p>
+              <div>SE MARIENT</div>
+              <p></p>
               LE VENDREDI 3 SEPTEMBRE 2021
               <div className="space-div"></div>
               <Link

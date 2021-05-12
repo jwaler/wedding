@@ -349,7 +349,7 @@ input:focus {
 .img-round {
   height: 250px;
   width: auto;
-  opacity: 0.7;
+  filter: brightness(90%);
   -webkit-transition: all 2s;
   -moz-transition: all 2s;
   -o-transition: all 2s;
@@ -358,7 +358,7 @@ input:focus {
 .img-round:hover {
   height: 250px;
   width: auto;
-  opacity: 1;
+  filter: brightness(100%);
 }
 /* TEST CSS */
 .use-border {
@@ -397,21 +397,21 @@ ADDRESS UNDER MAP */
   font-size: 17px;
   text-align: center;
 }
-.breaking-news {
-  border-radius: 2px;
-}
 
+.img-programme {
+  filter: brightness(80%);
+  filter: grayscale(50%);
+}
+.img-programme-acf {
+  filter: brightness(65%);
+}
 /* MOBILE  */
 @media (max-width: 600px) {
-  .hashtag {
-    font-size: 12px;
+  .benetcam {
+    font-size: auto;
   }
-  .breaking-news {
-    font-size: 18px;
-    width: auto;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 250px;
+  .hashtag {
+    display: none;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -444,6 +444,7 @@ ADDRESS UNDER MAP */
     opacity: 1 !important;
   }
   .text-oncarousel {
+    font-size: auto;
     margin-top: 250px !important;
     z-index: 1;
     color: white;
@@ -462,14 +463,11 @@ ADDRESS UNDER MAP */
   .img-programme {
     width: 100%;
     max-width: 300px;
-    filter: contrast(70%);
-    filter: grayscale(50%);
   }
   .img-programme-acf {
     width: 100%;
     max-width: 700px;
     min-height: 200px;
-    filter: grayscale(50%);
     border-radius: 0px 15px 0px 0px;
   }
   .card-two-prog-title {
@@ -575,13 +573,11 @@ ADDRESS UNDER MAP */
 }
 /* DESKTOP  */
 @media (min-width: 992px) {
-  .breaking-news {
-    font-size: 25px;
-    max-width: 750px;
-    width: auto;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 310px;
+  .benetcam {
+    font-size: 35px;
+  }
+  .hashtag {
+    margin-right: 25px;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -634,15 +630,11 @@ ADDRESS UNDER MAP */
     width: 100%;
     max-width: 700px;
     min-height: 200px;
-    filter: contrast(70%);
-    filter: grayscale(50%);
     border-radius: 15px 0px 0px 0px;
   }
   .img-programme-acf {
     width: 100%;
     max-width: 700px;
-    min-height: 200px;
-    filter: grayscale(50%);
     border-radius: 0px 15px 0px 0px;
   }
   .programme-img-col {
@@ -651,11 +643,10 @@ ADDRESS UNDER MAP */
 
   /* programme col 2 text div */
   .card-two-prog-title {
-    font-size: 18px;
+    font-size: 20px;
   }
   .card-two-prog-location {
     font-size: 15px !important;
-    margin-left: 50px;
   }
 
   /* form cards */
@@ -667,7 +658,7 @@ ADDRESS UNDER MAP */
     font-size: 22px;
   }
   .core-text {
-    text-align: left;
+    text-align: center;
     width: 100%;
     display: inline-block;
   }
@@ -677,6 +668,7 @@ ADDRESS UNDER MAP */
     margin-right: 30px;
   }
   .text-oncarousel {
+    font-size: 25px;
     margin-top: 250px !important;
     z-index: 1;
     color: white;
@@ -685,7 +677,7 @@ ADDRESS UNDER MAP */
     position: absolute;
   }
   .space-div {
-    margin-bottom: 320px;
+    margin-bottom: 280px;
   }
   .container-programme-row {
     margin: 0 auto;
@@ -760,12 +752,11 @@ ADDRESS UNDER MAP */
 }
 /* IPAD */
 @media (max-width: 991px) and (min-width: 600px) {
-  .breaking-news {
-    padding-top: 300px;
-    font-size: 22px;
-    width: auto;
-    padding: 10px;
-    margin-bottom: 340px;
+  .benetcam {
+    font-size: 30px;
+  }
+  .hashtag {
+    display: none;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -798,6 +789,7 @@ ADDRESS UNDER MAP */
     opacity: 1 !important;
   }
   .text-oncarousel {
+    font-size: auto;
     margin-top: 250px !important;
     z-index: 1;
     color: white;
@@ -818,15 +810,12 @@ ADDRESS UNDER MAP */
     width: 100%;
     max-width: 700px;
     min-height: 200px;
-    filter: contrast(70%);
-    filter: grayscale(50%);
     border-radius: 15px 0px 0px 0px;
   }
   .img-programme-acf {
     width: 100%;
     max-width: 700px;
     min-height: 200px;
-    filter: grayscale(50%);
     border-radius: 0px 15px 0px 0px;
   }
   .programme-img-col {

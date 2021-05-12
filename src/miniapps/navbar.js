@@ -28,7 +28,9 @@ const NavBar = () => {
       </button>
       {/* <img style={{ height: "40px" }} src={logo} alt="" /> */}
       {/* <b>{logo}</b> */}
-      <div className="logo-couple">{logo}</div>
+      <div className="logo-couple">
+        <div>#benetcam22</div>
+      </div>
       <div className="insta">
         <a href="https://www.instagram.com/ben_cam_2022">
           <img className="insta-logo" src={insta} alt={insta} />
