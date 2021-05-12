@@ -83,7 +83,7 @@ export default class App extends React.Component {
               autoPlay={true}
               autoFocus={true}
               interval={5000}
-              emulateTouch={true}
+              emulateTouch={false}
               infiniteLoop={true}
               centerMode={false}
               centerSlidePercentage={100}
