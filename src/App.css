@@ -381,7 +381,7 @@ input:focus {
   height: 500px;
   border-radius: 0 !important;
   margin-bottom: 10px;
-  opacity: 0.7 !important;
+  opacity: 1 !important;
 }
 .legend:hover {
   opacity: 1 !important;
@@ -412,19 +412,17 @@ ADDRESS UNDER MAP */
   text-align: center;
 }
 .breaking-news {
-  border: solid 2px white;
-  background-color: rgb(0, 0, 0, 0.7);
   border-radius: 2px;
 }
 
 /* MOBILE  */
 @media (max-width: 600px) {
   .breaking-news {
-    font-size: 13px;
+    font-size: 18px;
     width: auto;
     margin: 0 auto;
     padding: 10px;
-    margin-bottom: 400px;
+    margin-bottom: 350px;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -447,7 +445,15 @@ ADDRESS UNDER MAP */
   .img-programme {
     width: 100%;
     max-width: 300px;
+    filter: contrast(70%);
     filter: grayscale(50%);
+  }
+  .img-programme-acf {
+    width: 100%;
+    max-width: 700px;
+    min-height: 200px;
+    filter: grayscale(50%);
+    border-radius: 0px 15px 0px 0px;
   }
   .card-two-prog-title {
     font-size: 20px;
@@ -558,7 +564,7 @@ ADDRESS UNDER MAP */
     width: auto;
     margin: 0 auto;
     padding: 10px;
-    margin-bottom: 400px;
+    margin-bottom: 310px;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -574,14 +580,35 @@ ADDRESS UNDER MAP */
     height: 600px;
     object-fit: cover;
   }
-
+  .programme-img-col {
+    max-height: 480px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    overflow: hidden;
+  }
+  .programme-col {
+    max-height: 480px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px !important;
+    overflow: hidden;
+  }
   /* programme col 1 img settings */
   .img-programme {
     width: 100%;
     max-width: 700px;
     min-height: 200px;
+    filter: contrast(70%);
     filter: grayscale(50%);
     border-radius: 15px 0px 0px 0px;
+  }
+  .img-programme-acf {
+    width: 100%;
+    max-width: 700px;
+    min-height: 200px;
+    filter: grayscale(50%);
+    border-radius: 0px 15px 0px 0px;
   }
   .programme-img-col {
     text-align: right;
@@ -619,7 +646,7 @@ ADDRESS UNDER MAP */
     margin: 0 auto;
     overflow: hidden;
     width: 80%;
-    height: 600px;
+    height: auto;
     max-height: auto;
     padding-top: 70px;
     margin-bottom: 100px;
@@ -671,6 +698,9 @@ ADDRESS UNDER MAP */
   .gmap_canvas:hover {
     opacity: 1;
   }
+  .not-visible-for-desktop {
+    display: none;
+  }
   .logo-couple {
     display: none;
   }
@@ -685,10 +715,10 @@ ADDRESS UNDER MAP */
 @media (max-width: 991px) and (min-width: 600px) {
   .breaking-news {
     padding-top: 300px;
-    font-size: auto;
+    font-size: 22px;
     width: auto;
     padding: 10px;
-    margin-bottom: 400px;
+    margin-bottom: 340px;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -713,8 +743,16 @@ ADDRESS UNDER MAP */
     width: 100%;
     max-width: 700px;
     min-height: 200px;
+    filter: contrast(70%);
     filter: grayscale(50%);
     border-radius: 15px 0px 0px 0px;
+  }
+  .img-programme-acf {
+    width: 100%;
+    max-width: 700px;
+    min-height: 200px;
+    filter: grayscale(50%);
+    border-radius: 0px 15px 0px 0px;
   }
   .programme-img-col {
     text-align: right;

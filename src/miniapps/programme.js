@@ -1,6 +1,7 @@
 import React from "react";
 import "./../App.css";
-import programme from "./../static/img/acf-dessous.jpg";
+import programme from "./../static/img/mairie.jpg";
+import programme2 from "./../static/img/acf-dessous.jpg";
 import AnimateHeight from "react-animate-height";
 import Mapping from "./map.js";
 import Mapping2 from "./map-2.js";
@@ -56,6 +57,7 @@ export default class Programme extends React.Component {
     return (
       <div>
         {/* FOR DESKTOP VERSION */}
+        {/* mairie */}
         <div className="row ipad-mobile-render">
           <div className="col-6 programme-img-col">
             <AnimateHeight
@@ -65,28 +67,20 @@ export default class Programme extends React.Component {
             >
               <Mapping></Mapping>
             </AnimateHeight>
-            <AnimateHeight
-              id="example-panel"
-              duration={1500}
-              height={heightDiv2} // see props documentation below
-            >
-              <Mapping2></Mapping2>
-            </AnimateHeight>
             <img className="img-programme" src={programme} alt="" />
 
             <p></p>
           </div>
           <div className="col-6 programme-col">
-            VENDREDI 3 SEPTEMBRE 2021
-            <p></p>
             <div className="core-text">
-              <img
-                className="img-ring"
-                src="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-                alt="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-              />
-              {"   "}
-              15h30: MARIAGE CIVIL
+              <p className="card-two-prog-title">
+                <img
+                  className="img-ring"
+                  src="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
+                  alt="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
+                />
+                {"   "}15h30: MARIAGE CIVIL
+              </p>
               <p></p>
               <button
                 aria-expanded={height !== 0}
@@ -99,6 +93,14 @@ export default class Programme extends React.Component {
               </button>
               <p></p>
               <p></p>
+            </div>
+          </div>
+        </div>
+        {/* ACF */}
+        <div className="row ipad-mobile-render">
+          <div className="col-6 programme-col">
+            <p></p>
+            <div className="core-text">
               <p className="card-two-prog-title">
                 <i className="fas fa-cocktail mr-2"></i> 18h30: COCKTAIL
               </p>
@@ -140,17 +142,27 @@ export default class Programme extends React.Component {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* FOR MOBILE IPAD VERSION */}
-        <div className="row">
-          <div className="col-6 mobile-col">
-            <img className="img-programme" src={programme} alt="" />
+          <div className="col-6 programme-img-col">
+            <AnimateHeight
+              id="example-panel"
+              duration={1500}
+              height={heightDiv2} // see props documentation below
+            >
+              <Mapping2></Mapping2>
+            </AnimateHeight>
+            <img className="img-programme-acf" src={programme2} alt="" />
 
             <p></p>
           </div>
+        </div>
+
+        {/* FOR MOBILE IPAD VERSION */}
+        <div className="row not-visible-for-desktop">
           <div className="col-6 mobile-col">
-            VENDREDI 3 SEPTEMBRE 2021
+            <img className="img-programme" src={programme} alt="" />
+            <p></p>
+          </div>
+          <div className="col-6 mobile-col">
             <p></p>
             <img
               className="img-ring"
@@ -179,6 +191,14 @@ export default class Programme extends React.Component {
               <Mapping></Mapping>
             </AnimateHeight>
             <p></p>
+          </div>
+        </div>
+        <div className="row not-visible-for-desktop">
+          <div className="col-6 mobile-col">
+            <img className="img-programme" src={programme2} alt="" />
+            <p></p>
+          </div>
+          <div className="col-6 mobile-col">
             <p></p>
             <i className="fas fa-cocktail mr-2"></i>
             <p className="card-two-prog-title">18h30: COCKTAIL</p>

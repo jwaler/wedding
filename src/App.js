@@ -97,11 +97,13 @@ export default class App extends React.Component {
                 <img
                   src={img1}
                   className="merry-go-round-img"
-                  style={{ filter: "contrast(70%)" }}
+                  style={{ filter: "contrast(50%)" }}
                 />
                 <p className="legend">
                   <p className="breaking-news">
-                    BENJAMIN LEROUX ET CAMILLE CHAFEY SE MARIENT !
+                    BENJAMIN LEROUX ET CAMILLE CHAFEY <br />
+                    SE MARIENT<p></p>
+                    LE VENDREDI 3 SEPTEMBRE 2021
                   </p>
                   <p className="go-to-programme-link">
                     PROGRAMME
@@ -114,11 +116,13 @@ export default class App extends React.Component {
                 <img
                   src={img5}
                   className="merry-go-round-img"
-                  style={{ filter: "contrast(70%)" }}
+                  style={{ filter: "contrast(50%)" }}
                 />
                 <p className="legend">
                   <p className="breaking-news">
-                    BENJAMIN LEROUX ET CAMILLE CHAFEY SE MARIENT !
+                    BENJAMIN LEROUX ET CAMILLE CHAFEY
+                    <br /> SE MARIENT<p></p>
+                    LE VENDREDI 3 SEPTEMBRE 2021
                   </p>
                   <p className="go-to-programme-link">
                     PROGRAMME
@@ -135,7 +139,9 @@ export default class App extends React.Component {
                 />
                 <p className="legend">
                   <p className="breaking-news">
-                    BENJAMIN LEROUX ET CAMILLE CHAFEY SE MARIENT !
+                    BENJAMIN LEROUX ET CAMILLE CHAFEY
+                    <br /> SE MARIENT<p></p>
+                    LE VENDREDI 3 SEPTEMBRE 2021
                   </p>
                   <p className="go-to-programme-link">
                     PROGRAMME
@@ -194,6 +200,7 @@ export default class App extends React.Component {
             <div className={`${this.state.visibilitythree}`}>
               <div className="container-programme-row">
                 <p className="programme-title">PROGRAMME</p>
+                <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
                 <p></p>
                 <Programme></Programme>
               </div>
