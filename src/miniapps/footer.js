@@ -12,11 +12,12 @@ function ContactPopover() {
   return (
     <div>
       <OverlayTrigger trigger="click" placement="top" overlay={ContactPopover}>
-        <Button variant="outline-dark" style={{ fontSize: "15px" }}>
+        <Button variant="outline-dark" className="footer-button">
           CREE PAR JEREMY LEROUX
         </Button>
       </OverlayTrigger>
       <p></p>
+      <p style={{ fontSize: "9px" }}>MENTIONS LEGALES</p>
       <p></p>
     </div>
   );

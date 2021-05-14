@@ -1,5 +1,7 @@
 import "./App.css";
 import Observer from "@researchgate/react-intersection-observer";
+import { ReactVideo } from "reactjs-media";
+import ReactPlayer from "react-player";
 import { Link } from "react-scroll";
 import Timer from "./miniapps/clock.js";
 import NavBar from "./miniapps/navbar.js";
@@ -11,10 +13,10 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import img1 from "./static/img/background.jpg";
-import img2 from "./static/img/wedding.gif";
 import img3 from "./static/img/jardin.jpg";
-import img5 from "./static/img/acf-dessous.jpg";
-import img4 from "./static/img/rsvp.jpg";
+import img5 from "./static/img/rsvp.jpg";
+import gif from "./static/img/acf3.gif";
+import video from "./static/img/wedding.mp4";
 
 // Main WEBSITE
 export default class App extends React.Component {
@@ -116,6 +118,7 @@ export default class App extends React.Component {
                 <div>
                   <img
                     src={img3}
+                    alt={img3}
                     className="merry-go-round-img"
                     style={{ filter: "brightness(50%)" }}
                   />
@@ -123,6 +126,7 @@ export default class App extends React.Component {
                 <div>
                   <img
                     src={img1}
+                    alt={img1}
                     className="merry-go-round-img"
                     style={{ filter: "brightness(50%)" }}
                   />
@@ -130,6 +134,7 @@ export default class App extends React.Component {
                 <div>
                   <img
                     src={img5}
+                    alt={img5}
                     className="merry-go-round-img"
                     style={{ filter: "brightness(50%)" }}
                   />
@@ -150,11 +155,8 @@ export default class App extends React.Component {
 
             {/* VIDEO */}
             <Observer onChange={this.FadeInContentTwo}>
-              <div
-                className={`${this.state.visibilitytwo}`}
-                style={{ marginBottom: "100px" }}
-              >
-                <Carousel
+              <div className={`${this.state.visibilitytwo}`}>
+                {/* <Carousel
                   showArrows={true}
                   autoPlay={true}
                   autoFocus={true}
@@ -162,7 +164,7 @@ export default class App extends React.Component {
                   emulateTouch={true}
                   infiniteLoop={true}
                   centerMode={false}
-                  centerSlidePercentage={110}
+                  centerSlidePercentage={90}
                   showThumbs={false}
                   showIndicators={false}
                   stopOnHover={false}
@@ -173,18 +175,36 @@ export default class App extends React.Component {
                     <img
                       src={img2}
                       className="merry-go-round-img-scroll"
-                      style={{ filter: "contrast(50%)" }}
+                      style={{ filter: "brightness(90%)" }}
                     />
-                    <p className="legend"></p>
                   </div>
-                </Carousel>
+                </Carousel> */}
+                {/* <ReactVideo
+                  src={video}
+                  autoPlay
+                  primaryColor="red"
+                  poster={gif}
+                  className="video-frame"
+                  muted="true"
+                /> */}
+                <ReactPlayer
+                  url={video}
+                  playing="true"
+                  loop="true"
+                  muted="true"
+                  width="100%"
+                  height="100%"
+                />
               </div>
             </Observer>
 
             {/* Programme */}
             <div id="programme"></div>
             <Observer onChange={this.FadeInContentThree}>
-              <div className={`${this.state.visibilitythree}`}>
+              <div
+                className={`${this.state.visibilitythree}`}
+                style={{ marginTop: "120px" }}
+              >
                 <div className="container-programme-row">
                   <p className="programme-title">PROGRAMME</p>
                   <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
@@ -196,7 +216,10 @@ export default class App extends React.Component {
             <div id="rsvp"></div>
             {/* RVSP */}
             <Observer onChange={this.FadeInContentFour}>
-              <div className={`${this.state.visibilityfour}`}>
+              <div
+                className={`${this.state.visibilityfour}`}
+                style={{ marginTop: "120px" }}
+              >
                 <div id="rsvp" className="buffer-container">
                   <div className="rsvp-carousel">
                     <div className="span-text"></div>

@@ -132,6 +132,7 @@ export default class Programme extends React.Component {
         </div>
 
         {/* FOR MOBILE IPAD VERSION */}
+        {/* mairie */}
         <div className="row not-visible-for-desktop">
           <div className="col-6 mobile-col">
             <img className="img-programme" src={programme} alt="" />
@@ -139,12 +140,6 @@ export default class Programme extends React.Component {
           </div>
           <div className="col-6 mobile-col">
             <p></p>
-            <img
-              className="img-ring"
-              src="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-              alt="https://user-images.githubusercontent.com/55392/53607323-1d474a80-3b73-11e9-9832-f514d0c70f1e.png"
-            />
-            {"   "}
             <p className="card-two-prog-title">15h30: MARIAGE CIVIL</p>
             <p></p>
             <button
@@ -168,6 +163,7 @@ export default class Programme extends React.Component {
             <p></p>
           </div>
         </div>
+        {/* ACF */}
         <div className="row not-visible-for-desktop">
           <div className="col-6 mobile-col">
             <img className="img-programme" src={programme2} alt="" />
@@ -175,7 +171,6 @@ export default class Programme extends React.Component {
           </div>
           <div className="col-6 mobile-col">
             <p></p>
-            <i className="fas fa-cocktail mr-2"></i>
             <p className="card-two-prog-title">18h30: COCKTAIL</p>
             <div className="card-two-prog-location">
               <i className="fas fa-map-marker-alt"></i> SUR LE TOIT DE
@@ -185,16 +180,10 @@ export default class Programme extends React.Component {
               (JARDIN DES FRERES RENAULT)
             </div>
             <p></p>
-            <img
-              className="img-ring"
-              src="https://image.flaticon.com/icons/png/512/16/16707.png"
-              alt="https://image.flaticon.com/icons/png/512/16/16707.png"
-            />
             <p className="card-two-prog-title"> 21h00: DINER</p>
             <p className="card-two-prog-location">
               <i className="fas fa-map-marker-alt"></i> DANS LES SALONS CONCORDE
             </p>
-            <i className="fas fa-music mr-2"></i>
             <p className="card-two-prog-title">23h30: SOIREE DANSANTE</p>
             <p className="card-two-prog-location">
               <i className="fas fa-map-marker-alt"></i> DANS LES SALONS CONCORDE
@@ -207,8 +196,6 @@ export default class Programme extends React.Component {
                 <i className="fas fa-map-marker-alt"> </i> A L'AUTOMOBILE CLUB
                 DE FRANCE
               </button>
-              <p></p>
-              <p></p>
               <div>
                 <AnimateHeight
                   id="example-panel"

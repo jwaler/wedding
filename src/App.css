@@ -40,17 +40,14 @@ hr.side {
 .link {
   cursor: pointer;
 }
-#root {
-  height: auto;
-}
 /* NAVIGATION */
 .mynavbar {
   letter-spacing: 2px;
   background: rgb(255, 255, 255) !important;
   opacity: 1;
-  position: fixed;
-  width: 100%;
   height: 120px;
+  width: 100%;
+  position: fixed;
   padding-bottom: 20px;
   padding-top: 20px;
   z-index: 120;
@@ -73,6 +70,7 @@ a {
 a:hover {
   text-decoration: none;
 }
+
 /* CONTAINER MAIN */
 .container-fluid {
   padding: 0 !important;
@@ -122,7 +120,6 @@ a:hover {
 }
 .counter-col {
   margin-top: 3px;
-
   margin-left: 3px;
   border-radius: 5px;
   border: solid 0.1rem rgba(97, 97, 97, 0.275);
@@ -164,12 +161,12 @@ FOOTER */
   position: relative;
   padding-left: 35px;
   cursor: pointer;
-  font-size: 15px;
-
+  font-size: 13px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  height: 30px;
 }
 .radio-button input {
   opacity: 0;
@@ -246,7 +243,7 @@ input {
   padding: 5px;
   border: transparent;
   color: black;
-  font-size: 12px;
+  font-size: 9px;
   border-radius: 5px;
   background: rgb(231, 240, 252);
   -ms-transform: scale(1.4);
@@ -322,7 +319,7 @@ input:focus {
 }
 .btnrsvp {
   border: rgb(0, 0, 0) solid 0.1em;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 7%;
   color: black;
   background: white;
@@ -335,25 +332,16 @@ input:focus {
   border: solid 0.1em transparent;
   color: rgb(255, 255, 255);
   background: rgb(0, 0, 0);
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .btnrsvp:focus {
   border: solid 0.1em;
   color: rgb(49, 49, 49);
   background: transparent;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .btnrsvp:active {
   border: white solid 0.1em;
   color: black;
   background: rgb(121, 152, 255);
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 /* IMAGE */
@@ -408,7 +396,6 @@ ADDRESS UNDER MAP */
   font-size: 17px;
   text-align: center;
 }
-
 .img-programme {
   filter: brightness(80%);
   filter: grayscale(50%);
@@ -416,13 +403,32 @@ ADDRESS UNDER MAP */
 .img-programme-acf {
   filter: brightness(65%);
 }
+.notvisible {
+  display: none;
+}
+.video-frame {
+  height: 800px;
+}
 /* MOBILE  */
 @media (max-width: 600px) {
+  .carousel-img-container {
+    top: 0;
+  }
+  .rsvp-carousel {
+    border-radius: 5px 30px 5px;
+    padding: 10px;
+    color: rgb(41, 41, 41);
+    width: 100%;
+    margin: 0 auto;
+    text-align: center !important;
+    background: rgba(255, 255, 255, 0.398);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
   .benetcam {
     font-size: auto;
-  }
-  .hashtag {
-    display: none;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -454,9 +460,16 @@ ADDRESS UNDER MAP */
   .space-div {
     margin-bottom: 100px;
   }
+  .datetimer {
+    font-size: 18px !important;
+  }
+  .datetimerdesc {
+    font-size: 12px !important;
+  }
   /* programme */
   .programme-title {
     text-align: center;
+    font-size: 15px;
     margin-top: 25px;
   }
   .img-programme {
@@ -470,12 +483,13 @@ ADDRESS UNDER MAP */
     border-radius: 0px 15px 0px 0px;
   }
   .card-two-prog-title {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
   }
   .card-two-prog-location {
-    margin-left: 20px;
-    font-size: 13px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .card-rsvp-title {
     padding-bottom: 20px;
@@ -484,34 +498,25 @@ ADDRESS UNDER MAP */
   }
   .card-rsvp-title-p {
     width: auto !important;
-    font-size: 18px !important;
+    font-size: 13px !important;
+  }
+  .input {
+    font-size: 8px !important;
   }
   .core-text {
     text-align: left;
     width: 100%;
     display: inline-block;
   }
-  /* MAIN CONTAINER */
-  .carousel-img-container {
-    top: 0;
-  }
-  .rsvp-carousel {
-    border-radius: 5px 30px 5px;
-    padding: 10px;
-    color: rgb(41, 41, 41);
-    width: 100%;
-    margin: 0 auto;
-    text-align: center !important;
-    background: rgba(255, 255, 255, 0.398);
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
-  }
+  /* INPUT RADIO  */
   .radio-group {
     margin-left: 20% !important;
   }
   /* MAPPING */
+  .button-prog-map {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
   .map-col {
     margin: 0 auto;
     text-align: center;
@@ -544,15 +549,20 @@ ADDRESS UNDER MAP */
   .gmap_canvas:hover {
     opacity: 1;
   }
+  /* NAVBAR  */
+  .hashtag {
+    display: none;
+  }
   .ipad-mobile-render {
     display: none;
   }
   .logo-couple {
-    font-size: 16px;
+    font-size: 14px;
     justify-content: center;
     margin: 0 auto;
+    margin-left: 100px;
     padding: 0 auto;
-    text-align: center;
+    text-align: right;
     display: flex;
   }
   .insta-logo {
@@ -570,100 +580,19 @@ ADDRESS UNDER MAP */
     text-align: center;
     margin: 0 auto;
   }
+  /* FOOTER  */
+  .footer-button {
+    font-size: 10px;
+  }
 }
 /* DESKTOP  */
 @media (min-width: 992px) {
+  .toggle {
+    display: none;
+  }
   .benetcam {
     font-size: 35px;
   }
-  .hashtag {
-    margin-right: 25px;
-  }
-  .go-to-programme-link {
-    cursor: pointer;
-    color: white;
-    font-size: 20px;
-  }
-  .go-to-programme-link:hover {
-    color: white;
-  }
-  .merry-go-round-img {
-    height: 765px;
-    overflow: hidden;
-    object-fit: cover;
-  }
-  .merry-go-round-img-scroll {
-    position: sticky;
-    height: 600px;
-    object-fit: cover;
-  }
-  /* CAROUSEL LEGENDS */
-  .legend {
-    background-color: transparent !important;
-    font-size: 80% !important;
-    width: 100px;
-    height: 500px;
-    border-radius: 0 !important;
-    margin-bottom: 10px;
-    opacity: 1 !important;
-  }
-  .legend:hover {
-    opacity: 1 !important;
-  }
-  .programme-img-col {
-    max-height: 480px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 12px;
-    overflow: hidden;
-  }
-  .programme-col {
-    max-height: 480px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 12px !important;
-    overflow: hidden;
-  }
-
-  /* programme col 1 img settings */
-  .img-programme {
-    width: 100%;
-    max-width: 700px;
-    min-height: 200px;
-    border-radius: 15px 0px 0px 0px;
-  }
-  .img-programme-acf {
-    width: 100%;
-    max-width: 700px;
-    border-radius: 0px 15px 0px 0px;
-  }
-  .programme-img-col {
-    text-align: right;
-  }
-
-  /* programme col 2 text div */
-  .card-two-prog-title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .card-two-prog-location {
-    font-size: 15px !important;
-  }
-
-  /* form cards */
-  .card-rsvp-title {
-    padding-bottom: 15px;
-  }
-  .card-rsvp-title-p {
-    width: auto !important;
-    font-size: 22px;
-  }
-  .core-text {
-    text-align: center;
-    width: 100%;
-    display: inline-block;
-  }
-  /* MAIN CONTAINER */
   .carousel-img-container {
     margin-left: 30px;
     margin-right: 30px;
@@ -680,16 +609,76 @@ ADDRESS UNDER MAP */
   .space-div {
     margin-bottom: 280px;
   }
+  .go-to-programme-link {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+  }
+  .go-to-programme-link:hover {
+    color: white;
+  }
+  .merry-go-round-img {
+    height: 765px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .merry-go-round-img-scroll {
+    position: sticky;
+    height: 600px;
+    object-fit: cover;
+  }
+  /* PROGRAMME */
   .container-programme-row {
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
     width: 90%;
     max-width: 1100px;
     height: auto;
-    max-height: auto;
     padding-top: 70px;
     margin-bottom: 100px;
   }
+  .programme-img-col {
+    max-height: 480px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    overflow: hidden;
+  }
+  .programme-col {
+    max-height: 480px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px !important;
+    overflow: hidden;
+  }
+  .img-programme {
+    width: 100%;
+    max-width: 700px;
+    min-height: 200px;
+    border-radius: 15px 0px 0px 0px;
+  }
+  .img-programme-acf {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 0px 15px 0px 0px;
+  }
+  .programme-img-col {
+    text-align: right;
+  }
+  .card-two-prog-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .card-two-prog-location {
+    font-size: 15px !important;
+  }
+  .core-text {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+  }
+  /* RSVP CARD */
   .rsvp-carousel {
     border: solid 1px rgb(187, 187, 187);
     background: rgba(255, 255, 255, 0.933);
@@ -704,6 +693,13 @@ ADDRESS UNDER MAP */
     -moz-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
+  }
+  .card-rsvp-title {
+    padding-bottom: 15px;
+  }
+  .card-rsvp-title-p {
+    width: auto !important;
+    font-size: 22px;
   }
   /* MAPPING */
   .map-col {
@@ -738,6 +734,10 @@ ADDRESS UNDER MAP */
   .gmap_canvas:hover {
     opacity: 1;
   }
+  /* NAVBAR */
+  .hashtag {
+    margin-right: 25px;
+  }
   .not-visible-for-desktop {
     display: none;
   }
@@ -750,14 +750,16 @@ ADDRESS UNDER MAP */
   .insta-large-screen {
     width: 35px;
   }
+  /* FOOTER */
+  .footer-button {
+    font-size: 15px;
+  }
 }
 /* IPAD */
 @media (max-width: 991px) and (min-width: 600px) {
+  /* CAROUSEL */
   .benetcam {
     font-size: 30px;
-  }
-  .hashtag {
-    display: none;
   }
   .go-to-programme-link {
     cursor: pointer;
@@ -777,18 +779,6 @@ ADDRESS UNDER MAP */
     object-fit: cover;
   }
   /* CAROUSEL LEGENDS */
-  .legend {
-    background-color: transparent !important;
-    font-size: 80% !important;
-    width: 100px;
-    height: 500px;
-    border-radius: 0 !important;
-    margin-bottom: 10px;
-    opacity: 1 !important;
-  }
-  .legend:hover {
-    opacity: 1 !important;
-  }
   .text-oncarousel {
     font-size: auto;
     margin-top: 250px !important;
@@ -802,11 +792,19 @@ ADDRESS UNDER MAP */
     margin-bottom: 320px;
   }
   /* programme */
+  .container-programme-row {
+    height: auto;
+    width: 100%;
+  }
+  .mobile-col {
+    min-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
   .programme-title {
     text-align: center;
     margin-top: 25px;
   }
-  /* programme col 1 img settings */
   .img-programme {
     width: 100%;
     max-width: 700px;
@@ -866,6 +864,10 @@ ADDRESS UNDER MAP */
   .gmap_canvas:hover {
     opacity: 1;
   }
+  /* NAVBAR */
+  .hashtag {
+    display: none;
+  }
   .ipad-mobile-render {
     display: none;
   }
@@ -883,14 +885,9 @@ ADDRESS UNDER MAP */
   .insta-large-screen {
     display: none;
   }
-  .container-programme-row {
-    height: auto;
-    width: 100%;
-  }
-  .mobile-col {
-    min-width: 100%;
-    text-align: center;
-    margin: 0 auto;
+  /* FOOTER */
+  .footer-button {
+    font-size: 12px;
   }
 }
 /* NEED MODIFICATIONS */
@@ -899,6 +896,7 @@ ADDRESS UNDER MAP */
     justify-content: center;
     font-size: 15px;
     margin: 0 auto;
+    margin-left: 70px;
     padding: 0 auto;
     text-align: center;
     display: flex;
@@ -917,6 +915,7 @@ ADDRESS UNDER MAP */
     text-align: center;
     margin: 0 auto;
     font-size: 12px;
+    min-height: 464px;
   }
   .programme-col {
     text-align: center;

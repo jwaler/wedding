@@ -79,7 +79,8 @@ export default class AttendFormR extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const specialCharacter = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
+    const specialCharacter =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
     // console.log("Guest", this.state.activeGuest); // display the object
     var csrftoken = this.getCookie("csrftoken");
     var url = "https://www.turtle-api.net/api/guest-create/"; // DRF create URL
