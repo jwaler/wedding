@@ -196,6 +196,8 @@ export default class Programme extends React.Component {
                 <i className="fas fa-map-marker-alt"> </i> A L'AUTOMOBILE CLUB
                 DE FRANCE
               </button>
+              <p></p>
+              <p></p>
               <div>
                 <AnimateHeight
                   id="example-panel"
