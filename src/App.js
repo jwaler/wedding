@@ -187,14 +187,19 @@ export default class App extends React.Component {
                   className="video-frame"
                   muted="true"
                 /> */}
-                <ReactPlayer
-                  url={video}
-                  playing="true"
-                  loop="true"
-                  muted="true"
-                  width="100%"
-                  height="100%"
-                />
+                <div className="invisible-to-mobile">
+                  <ReactPlayer
+                    url={video}
+                    playing="true"
+                    loop="true"
+                    muted="true"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <div className="invisible-to-desktop">
+                  <ReactVideo src={video} autoPlay height="100px" />
+                </div>
               </div>
             </Observer>
 

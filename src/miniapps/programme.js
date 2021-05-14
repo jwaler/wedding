@@ -173,21 +173,16 @@ export default class Programme extends React.Component {
             <p></p>
             <p className="card-two-prog-title">18h30: COCKTAIL</p>
             <div className="card-two-prog-location">
-              <i className="fas fa-map-marker-alt"></i> SUR LE TOIT DE
-              L'AUTOMOBILE CLUB DE FRANCE
+              SUR LE TOIT DE L'AUTOMOBILE CLUB DE FRANCE
             </div>
             <div className="card-two-prog-location">
               (JARDIN DES FRERES RENAULT)
             </div>
             <p></p>
             <p className="card-two-prog-title"> 21h00: DINER</p>
-            <p className="card-two-prog-location">
-              <i className="fas fa-map-marker-alt"></i> DANS LES SALONS CONCORDE
-            </p>
+            <p className="card-two-prog-location">DANS LES SALONS CONCORDE</p>
             <p className="card-two-prog-title">23h30: SOIREE DANSANTE</p>
-            <p className="card-two-prog-location">
-              <i className="fas fa-map-marker-alt"></i> DANS LES SALONS CONCORDE
-            </p>
+            <p className="card-two-prog-location">DANS LES SALONS CONCORDE</p>
             <p>
               <button
                 className="button-prog-map"

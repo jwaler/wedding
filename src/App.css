@@ -411,6 +411,9 @@ ADDRESS UNDER MAP */
 }
 /* MOBILE  */
 @media (max-width: 600px) {
+  .invisible-to-mobile {
+    display: none;
+  }
   .carousel-img-container {
     top: 0;
   }
@@ -587,6 +590,9 @@ ADDRESS UNDER MAP */
 }
 /* DESKTOP  */
 @media (min-width: 992px) {
+  .invisible-to-desktop {
+    display: none;
+  }
   .toggle {
     display: none;
   }
@@ -737,6 +743,7 @@ ADDRESS UNDER MAP */
   /* NAVBAR */
   .hashtag {
     margin-right: 25px;
+    font-size: 10px;
   }
   .not-visible-for-desktop {
     display: none;
@@ -757,6 +764,9 @@ ADDRESS UNDER MAP */
 }
 /* IPAD */
 @media (max-width: 991px) and (min-width: 600px) {
+  .invisible-to-desktop {
+    display: none;
+  }
   /* CAROUSEL */
   .benetcam {
     font-size: 30px;
@@ -921,5 +931,16 @@ ADDRESS UNDER MAP */
     text-align: center;
     margin: 0 auto;
     font-size: 12px !important;
+  }
+}
+/* MACBOOK SCREEN  */
+@media (max-height: 780px) {
+  .merry-go-round-img {
+    height: 620px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .space-div {
+    margin-bottom: 140px;
   }
 }
