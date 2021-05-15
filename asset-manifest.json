@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wedding/static/css/main.924b4a66.chunk.css",
-    "main.js": "/wedding/static/js/main.2ad9344a.chunk.js",
-    "main.js.map": "/wedding/static/js/main.2ad9344a.chunk.js.map",
+    "main.js": "/wedding/static/js/main.daf64338.chunk.js",
+    "main.js.map": "/wedding/static/js/main.daf64338.chunk.js.map",
     "runtime-main.js": "/wedding/static/js/runtime-main.13eb0f84.js",
     "runtime-main.js.map": "/wedding/static/js/runtime-main.13eb0f84.js.map",
     "static/css/2.6b560088.chunk.css": "/wedding/static/css/2.6b560088.chunk.css",
@@ -24,13 +24,13 @@
     "static/media/mairie.d1558e72.jpg": "/wedding/static/media/mairie.d1558e72.jpg",
     "static/media/rsvp.2c0d8a43.jpg": "/wedding/static/media/rsvp.2c0d8a43.jpg",
     "static/media/unnamed.213d855d.png": "/wedding/static/media/unnamed.213d855d.png",
-    "static/media/wedding2.89443f55.mp4": "/wedding/static/media/wedding2.89443f55.mp4"
+    "static/media/wedding.2e19034e.mp4": "/wedding/static/media/wedding.2e19034e.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.13eb0f84.js",
     "static/css/2.6b560088.chunk.css",
     "static/js/2.adde5d80.chunk.js",
     "static/css/main.924b4a66.chunk.css",
-    "static/js/main.2ad9344a.chunk.js"
+    "static/js/main.daf64338.chunk.js"
   ]
 }
