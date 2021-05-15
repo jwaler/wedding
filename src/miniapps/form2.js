@@ -16,10 +16,13 @@ export default class AttendFormR extends React.Component {
       },
       attending: "",
       guestname: "",
+      showButton: "",
+      showLoader: "notvisible",
+      disabled: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.resetForm = this.resetForm.bind(this);
+    this.changeBtn = this.changeBtn.bind(this);
     this.getCookie = this.getCookie.bind(this);
   }
 
@@ -39,6 +42,13 @@ export default class AttendFormR extends React.Component {
     return cookieValue;
   }
 
+  changeBtn() {
+    this.setState({
+      disabled: true,
+      showButton: "notvisible",
+      showLoader: "",
+    });
+  }
   handleChange(e) {
     var name = e.target.className; // fetch from html tagname below
     var value = e.target.value; // fetch from html tagname below
@@ -94,6 +104,7 @@ export default class AttendFormR extends React.Component {
     } else if (this.state.activeGuest.attend === "") {
       this.setState({ errMsg: "IL MANQUE VOTRE REPONSE." });
     } else {
+      this.changeBtn();
       fetch(url, {
         method: "POST",
         headers: {
@@ -125,15 +136,6 @@ export default class AttendFormR extends React.Component {
     // process with the submit, url (edit or new), POST, headers with token, JSONed "data"
   }
 
-  resetForm() {
-    this.setState({
-      form: true,
-      isSent: false,
-      errMsg: "",
-      attending: "",
-      guestname: "",
-    });
-  }
   render() {
     var self = this;
     const thankYouMessage = (
@@ -235,8 +237,16 @@ export default class AttendFormR extends React.Component {
                   {self.state.errMsg}
                 </span>
                 <p></p>
-                <button className="btnrsvp" type="submit" id="submit">
-                  REPONDRE
+                <button
+                  className="btnrsvp"
+                  type="submit"
+                  id="submit"
+                  disabled={this.state.disabled}
+                >
+                  <div className={this.state.showButton}>REPONDRE</div>
+                  <div className={this.state.showLoader}>
+                    <i class="fa fa-spinner fa-spin"></i> ENVOI
+                  </div>
                 </button>
               </form>
             </div>
