@@ -15,7 +15,7 @@ import img1 from "./static/img/background.jpg";
 import img3 from "./static/img/jardin.jpg";
 import img5 from "./static/img/rsvp.jpg";
 import gif from "./static/img/acf1.gif";
-import video from "./static/img/wedding2.mp4";
+import video from "./static/img/wedding.mp4";
 
 // Main WEBSITE
 export default class App extends React.Component {
@@ -142,14 +142,11 @@ export default class App extends React.Component {
                 <div className="invisible-to-mobile">
                   <ReactPlayer
                     url={video}
-                    playing={true}
-                    loop={true}
+                    playing="true"
+                    loop="true"
                     muted={true}
                     width="100%"
                     height="100%"
-                    onEnded={() => {
-                      console.log("end");
-                    }}
                   />
                 </div>
                 <div className="invisible-to-desktop">
