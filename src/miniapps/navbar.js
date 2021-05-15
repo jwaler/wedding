@@ -68,12 +68,17 @@ export default class NavBar extends React.Component {
           </button>
           {/* <img style={{ height: "40px" }} src={logo} alt="" /> */}
           {/* <b>{logo}</b> */}
-          <div className="logo-couple">
-            <div>#benetcam22</div>
-          </div>
+          <div className="logo-couple"></div>
           <div className="insta">
             <a href="https://www.instagram.com/ben_cam_2022">
               <img className="insta-logo" src={insta} alt={insta} />
+              <p></p>
+              <div
+                className="not-visible-for-desktop"
+                style={{ fontSize: "8px" }}
+              >
+                #benetcam22
+              </div>
             </a>
           </div>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">

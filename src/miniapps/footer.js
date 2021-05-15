@@ -17,7 +17,11 @@ function ContactPopover() {
         </Button>
       </OverlayTrigger>
       <p></p>
-      <p style={{ fontSize: "9px" }}>MENTIONS LEGALES</p>
+      <p style={{ fontSize: "9px" }}>
+        <a href="https://support.github.com/" style={{ fontSize: "8px" }}>
+          MENTIONS LEGALES
+        </a>
+      </p>
       <p></p>
     </div>
   );

@@ -411,6 +411,9 @@ ADDRESS UNDER MAP */
 }
 /* MOBILE  */
 @media (max-width: 600px) {
+  .thank-msg {
+    font-size: 14px;
+  }
   .invisible-to-mobile {
     display: none;
   }
@@ -447,7 +450,7 @@ ADDRESS UNDER MAP */
   }
   .merry-go-round-img-scroll {
     position: sticky;
-    height: 600px;
+    height: 300px;
     object-fit: cover;
   }
   /* CAROUSEL LEGENDS */
@@ -461,7 +464,7 @@ ADDRESS UNDER MAP */
     position: absolute;
   }
   .space-div {
-    margin-bottom: 100px;
+    margin-bottom: 120px;
   }
   .datetimer {
     font-size: 18px !important;
@@ -567,6 +570,9 @@ ADDRESS UNDER MAP */
     padding: 0 auto;
     text-align: right;
     display: flex;
+  }
+  .insta {
+    text-align: center;
   }
   .insta-logo {
     width: 35px;
@@ -889,6 +895,9 @@ ADDRESS UNDER MAP */
     text-align: center;
     display: flex;
   }
+  .insta {
+    text-align: center;
+  }
   .insta-logo {
     width: 35px;
   }
@@ -934,7 +943,7 @@ ADDRESS UNDER MAP */
   }
 }
 /* MACBOOK SCREEN  */
-@media (max-height: 780px) {
+@media (max-height: 780px) and (min-width: 992px) {
   .merry-go-round-img {
     height: 620px;
     overflow: hidden;

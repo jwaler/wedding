@@ -143,16 +143,16 @@ export default class AttendFormR extends React.Component {
           padding: "3px",
         }}
       >
-        <h3>Merci, {self.state.guestname} !</h3>
-        <h3>
+        <p className="thank-msg">Merci, {self.state.guestname} !</p>
+        <p className="thank-msg">
           Nous sommes impatients de fêter cet évènement mémorable avec vous !
-        </h3>
+        </p>
       </div>
     );
     const seeYouAgain = (
       <div>
-        <h3>Quel dommage, {self.state.guestname} !</h3>
-        <h4>Nous vous embrassons quand même bien fort.</h4>
+        <p className="thank-msg">Quel dommage, {self.state.guestname} !</p>
+        <p className="thank-msg">Nous vous embrassons quand même bien fort.</p>
       </div>
     );
     return (

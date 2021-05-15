@@ -1,6 +1,5 @@
 import "./App.css";
 import Observer from "@researchgate/react-intersection-observer";
-import { ReactVideo } from "reactjs-media";
 import ReactPlayer from "react-player";
 import { Link } from "react-scroll";
 import Timer from "./miniapps/clock.js";
@@ -15,8 +14,8 @@ import { Carousel } from "react-responsive-carousel";
 import img1 from "./static/img/background.jpg";
 import img3 from "./static/img/jardin.jpg";
 import img5 from "./static/img/rsvp.jpg";
-import gif from "./static/img/acf3.gif";
-import video from "./static/img/wedding.mp4";
+import gif from "./static/img/acf1.gif";
+import video from "./static/img/wedding2.mp4";
 
 // Main WEBSITE
 export default class App extends React.Component {
@@ -34,22 +33,6 @@ export default class App extends React.Component {
   componentDidMount() {
     this.setState({});
     window.scrollTo(0, 0);
-  }
-
-  fetchGuest() {
-    console.log("Fetching");
-    // fetch with DRF correct url (as if you were going to DRF view)
-    fetch(
-      "http://ec2-18-188-160-47.us-east-2.compute.amazonaws.com/api/guest-list/"
-    ).then((response) =>
-      // response will be JSONed and will send "data"
-
-      response.json().then((data) =>
-        // setState will deal with data and display on the screen
-        // you could console.log("Data", data)) to verify output (replace)
-        this.setState({ guestList: data })
-      )
-    );
   }
   FadeInContentOne = (event) => {
     this.setState({
@@ -156,49 +139,44 @@ export default class App extends React.Component {
             {/* VIDEO */}
             <Observer onChange={this.FadeInContentTwo}>
               <div className={`${this.state.visibilitytwo}`}>
-                {/* <Carousel
-                  showArrows={true}
-                  autoPlay={true}
-                  autoFocus={true}
-                  interval={5000}
-                  emulateTouch={true}
-                  infiniteLoop={true}
-                  centerMode={false}
-                  centerSlidePercentage={90}
-                  showThumbs={false}
-                  showIndicators={false}
-                  stopOnHover={false}
-                  showStatus={false}
-                  transitionTime={1000}
-                >
-                  <div className="img-container-scroll">
-                    <img
-                      src={img2}
-                      className="merry-go-round-img-scroll"
-                      style={{ filter: "brightness(90%)" }}
-                    />
-                  </div>
-                </Carousel> */}
-                {/* <ReactVideo
-                  src={video}
-                  autoPlay
-                  primaryColor="red"
-                  poster={gif}
-                  className="video-frame"
-                  muted="true"
-                /> */}
                 <div className="invisible-to-mobile">
                   <ReactPlayer
                     url={video}
-                    playing="true"
-                    loop="true"
-                    muted="true"
+                    playing={true}
+                    loop={true}
+                    muted={true}
                     width="100%"
                     height="100%"
+                    onEnded={() => {
+                      console.log("end");
+                    }}
                   />
                 </div>
                 <div className="invisible-to-desktop">
-                  <ReactVideo src={video} autoPlay height="100px" />
+                  <Carousel
+                    showArrows={true}
+                    autoPlay={true}
+                    autoFocus={true}
+                    interval={5000}
+                    emulateTouch={true}
+                    infiniteLoop={true}
+                    centerMode={false}
+                    centerSlidePercentage={90}
+                    showThumbs={false}
+                    showIndicators={false}
+                    stopOnHover={false}
+                    showStatus={false}
+                    transitionTime={1000}
+                  >
+                    <div className="img-container-scroll">
+                      <img
+                        src={gif}
+                        alt={gif}
+                        className="merry-go-round-img-scroll"
+                        style={{ filter: "brightness(90%)" }}
+                      />
+                    </div>
+                  </Carousel>
                 </div>
               </div>
             </Observer>
