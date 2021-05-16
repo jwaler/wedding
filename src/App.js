@@ -29,7 +29,6 @@ export default class App extends React.Component {
       visibilitythree: "hidden",
       visibilityfour: "hidden",
       visibilityfive: "hidden",
-      test: "test",
     };
   }
 
