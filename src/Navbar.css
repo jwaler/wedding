@@ -1,0 +1,92 @@
+.supertoggle {
+  position: fixed;
+  top: 35px;
+  left: 40px;
+  z-index: 2;
+  border: none;
+  background: transparent;
+  color: white;
+}
+.asupertoggle {
+  font-size: 35px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #272727;
+  cursor: pointer;
+}
+.asupertoggle:hover {
+  color: #bababa;
+}
+.toggle {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+  border: none;
+  background: transparent;
+}
+.atoggle {
+  font-size: 30px;
+  text-decoration: none;
+  color: #242424;
+  cursor: pointer;
+}
+.atoggle:hover {
+  color: #242424;
+}
+.supermenu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: rgb(238, 238, 238);
+  z-index: 1;
+  transition: 0s;
+}
+.superul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.superli {
+  list-style: none;
+}
+
+.superli a {
+  font-size: 17px;
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #262626;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.superli a:hover {
+  background: transparent;
+}
+.supermenu.superactive {
+  left: 0;
+  overflow: auto;
+}
+hr.sidemenu {
+  border: solid 0.1em rgb(126, 126, 126);
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 22px 0 21px;
+  height: 0;
+}

@@ -1,0 +1,17 @@
+try {
+        await DataStore.save(
+          new Response({
+            name: guest,
+            email: email,
+            response: attendance,
+          })
+        );
+        console.log("Merci !");
+        console.log(guest, attendance, email);
+        setIsSent(true);
+        setForm(false);
+        const models = await DataStore.query(Response);
+        console.log(models);
+      } catch (error) {
+        setErrMsg(`Merci de désactiver le mode "navigation privée"`);
+      }
