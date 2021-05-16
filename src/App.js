@@ -16,6 +16,7 @@ import img3 from "./static/img/jardin.jpg";
 import img5 from "./static/img/rsvp.jpg";
 import gif from "./static/img/acf1.gif";
 import video from "./static/img/wedding.mp4";
+import contactimg from "./static/img/acf-contact.jpg";
 
 // Main WEBSITE
 export default class App extends React.Component {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
       visibilitytwo: "hidden",
       visibilitythree: "hidden",
       visibilityfour: "hidden",
+      visibilityfive: "hidden",
     };
   }
 
@@ -54,6 +56,11 @@ export default class App extends React.Component {
       visibilityfour: event.isIntersecting ? "visible" : "invisible",
     });
   };
+  FadeInContentFive = (event) => {
+    this.setState({
+      visibilityfive: event.isIntersecting ? "visible" : "invisible",
+    });
+  };
 
   render() {
     return (
@@ -62,7 +69,7 @@ export default class App extends React.Component {
         <div className="container-fluid">
           {/* Navbar */}
           {/* main container */}
-          <div className="main-container" id="home">
+          <div className="main-container">
             {/* CAROUSEL MAIN MENU */}
             <div className="text-oncarousel">
               <div className="benetcam">BENJAMIN LEROUX ET CAMILLE CHAFEY</div>
@@ -79,10 +86,10 @@ export default class App extends React.Component {
               >
                 PROGRAMME
                 <br />
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                <i className="fa fa-chevron-down" aria-hidden="true"></i>
               </Link>
             </div>
-            <div className="carousel-img-container">
+            <div className="carousel-img-container" id="home">
               <Carousel
                 showArrows={true}
                 autoPlay={true}
@@ -140,14 +147,16 @@ export default class App extends React.Component {
             <Observer onChange={this.FadeInContentTwo}>
               <div className={`${this.state.visibilitytwo}`}>
                 <div className="invisible-to-mobile">
-                  <ReactPlayer
-                    url={video}
-                    playing="true"
-                    loop="true"
-                    muted={true}
-                    width="100%"
-                    height="100%"
-                  />
+                  <div className="video">
+                    <ReactPlayer
+                      url={video}
+                      muted={true}
+                      playing={true}
+                      loop={true}
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
                 </div>
                 <div className="invisible-to-desktop">
                   <Carousel
@@ -179,35 +188,84 @@ export default class App extends React.Component {
             </Observer>
 
             {/* Programme */}
-            <div id="programme"></div>
-            <Observer onChange={this.FadeInContentThree}>
-              <div
-                className={`${this.state.visibilitythree}`}
-                style={{ marginTop: "120px" }}
-              >
-                <div className="container-programme-row">
-                  <p className="programme-title">PROGRAMME</p>
-                  <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
-                  <p></p>
-                  <Programme></Programme>
-                </div>
-              </div>
-            </Observer>
-            <div id="rsvp"></div>
-            {/* RVSP */}
-            <Observer onChange={this.FadeInContentFour}>
-              <div
-                className={`${this.state.visibilityfour}`}
-                style={{ marginTop: "120px" }}
-              >
-                <div id="rsvp" className="buffer-container">
-                  <div className="rsvp-carousel">
-                    <div className="span-text"></div>
-                    <AttendFormR></AttendFormR>
+            <div id="programme">
+              <Observer onChange={this.FadeInContentThree}>
+                <div
+                  style={{ paddingTop: "120px" }}
+                  className={`${this.state.visibilitythree}`}
+                >
+                  <div className="container-programme-row">
+                    <p className="programme-title">PROGRAMME</p>
+                    <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
+                    <p></p>
+                    <Programme></Programme>
                   </div>
                 </div>
-              </div>
-            </Observer>
+              </Observer>
+            </div>
+            {/* RVSP */}
+            <div id="rsvp">
+              <Observer onChange={this.FadeInContentFour}>
+                <div
+                  className={`${this.state.visibilityfour}`}
+                  style={{ paddingTop: "120px" }}
+                >
+                  <div className="buffer-container">
+                    <div className="rsvp-carousel">
+                      <div className="span-text"></div>
+                      <AttendFormR></AttendFormR>
+                    </div>
+                  </div>
+                </div>
+              </Observer>
+            </div>
+            {/* CONTACT */}
+            <div id="contact">
+              <Observer onChange={this.FadeInContentFive}>
+                <div
+                  className={`${this.state.visibilityfive}`}
+                  style={{ paddingTop: "120px" }}
+                >
+                  <div className="contact-oncarousel">
+                    <div className="contact-frame">
+                      <a
+                        className="contact-link"
+                        href="mailto:contact@benjamin-camille.com"
+                      >
+                        CONTACT@BENJAMIN-CAMILLE.COM
+                      </a>
+                    </div>
+                    <p></p>
+                    <p></p>
+                    <div className="space-div-contact"></div>
+                  </div>
+                  <div className="carousel-img-container">
+                    <Carousel
+                      showArrows={true}
+                      autoPlay={true}
+                      autoFocus={true}
+                      emulateTouch={true}
+                      infiniteLoop={true}
+                      centerMode={false}
+                      showThumbs={false}
+                      showIndicators={false}
+                      stopOnHover={false}
+                      showStatus={false}
+                      height={500}
+                    >
+                      <div>
+                        <img
+                          src={contactimg}
+                          alt={contactimg}
+                          className="merry-go-round-contact-img"
+                          style={{ filter: "brightness(40%)" }}
+                        />
+                      </div>
+                    </Carousel>
+                  </div>
+                </div>
+              </Observer>
+            </div>
           </div>
           {/* FIN CONTAINER */}
           <div className="footer-container">

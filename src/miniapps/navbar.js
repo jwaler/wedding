@@ -85,8 +85,8 @@ export default class NavBar extends React.Component {
             <div className="align-menu-link"></div>
             <div className="nav-main">
               <Link
+                activeClass={"active"}
                 className="link"
-                activeClass="active"
                 to="home"
                 spy={true}
                 smooth={true}
@@ -95,7 +95,13 @@ export default class NavBar extends React.Component {
               </Link>
             </div>
             <div className="nav-main">
-              <Link className="link" to="programme" spy={true} smooth={true}>
+              <Link
+                activeClass={"active"}
+                className={`link`}
+                to="programme"
+                spy={true}
+                smooth={true}
+              >
                 PROGRAMME
               </Link>
             </div>
@@ -103,8 +109,25 @@ export default class NavBar extends React.Component {
               <a href="#liste-de-mariage">LISTE DE MARIAGE</a>
             </div>
             <div className="nav-main">
-              <Link className="link" to="rsvp" spy={true} smooth={true}>
+              <Link
+                activeClass={"active"}
+                className="link"
+                to="rsvp"
+                spy={true}
+                smooth={true}
+              >
                 RSVP
+              </Link>
+            </div>
+            <div className="nav-main">
+              <Link
+                activeClass={"active"}
+                className="link"
+                to="contact"
+                spy={true}
+                smooth={true}
+              >
+                CONTACT
               </Link>
             </div>
           </div>
@@ -116,7 +139,7 @@ export default class NavBar extends React.Component {
               onClick={this.showMenu}
             >
               <a className="asupertoggle">
-                <i class="fa fa-times" aria-hidden="true"></i>
+                <i className="fa fa-times" aria-hidden="true"></i>
               </a>
             </button>
             <ul className="superul">
@@ -159,6 +182,17 @@ export default class NavBar extends React.Component {
                   onClick={this.closeNav}
                 >
                   RSVP
+                </Link>
+              </li>
+              <li className="superli">
+                <Link
+                  className="link"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  onClick={this.closeNav}
+                >
+                  CONTACT
                 </Link>
               </li>
               <hr className="sidemenu" />

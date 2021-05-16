@@ -235,7 +235,16 @@ FOOTER */
   -o-transition: all 0.51s;
   transition: all 0.5s;
 }
-
+.active {
+  color: black !important;
+}
+.contact-frame {
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
+  opacity: 1;
+  background: rgb(255, 255, 255, 0.1);
+  cursor: pointer;
+}
 /* GUEST FORM INPUT */
 input {
   width: 150px;
@@ -409,6 +418,9 @@ ADDRESS UNDER MAP */
 .video-frame {
   height: 800px;
 }
+.contact-link:hover {
+  color: white;
+}
 /* MOBILE  */
 @media (max-width: 600px) {
   .thank-msg {
@@ -453,6 +465,11 @@ ADDRESS UNDER MAP */
     height: 300px;
     object-fit: cover;
   }
+  .merry-go-round-contact-img {
+    height: 320px;
+    overflow: hidden;
+    object-fit: cover;
+  }
   /* CAROUSEL LEGENDS */
   .text-oncarousel {
     font-size: 12px;
@@ -462,6 +479,21 @@ ADDRESS UNDER MAP */
     text-align: center;
     width: 100%;
     position: absolute;
+  }
+  .contact-oncarousel {
+    font-size: 12px;
+    margin-top: 150px !important;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .contact-link {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    width: 100%;
   }
   .space-div {
     margin-bottom: 120px;
@@ -599,6 +631,17 @@ ADDRESS UNDER MAP */
   .invisible-to-desktop {
     display: none;
   }
+  .invisible-to-mobile {
+    overflow: hidden;
+    max-height: 700px;
+  }
+  .video {
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+  }
   .toggle {
     display: none;
   }
@@ -617,6 +660,20 @@ ADDRESS UNDER MAP */
     text-align: center;
     width: 100%;
     position: absolute;
+  }
+  .contact-oncarousel {
+    font-size: 25px;
+    margin-top: 220px !important;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .contact-link {
+    font-size: 25px;
+    color: white;
+    text-align: center;
   }
   .space-div {
     margin-bottom: 280px;
@@ -637,6 +694,11 @@ ADDRESS UNDER MAP */
   .merry-go-round-img-scroll {
     position: sticky;
     height: 600px;
+    object-fit: cover;
+  }
+  .merry-go-round-contact-img {
+    height: 500px;
+    overflow: hidden;
     object-fit: cover;
   }
   /* PROGRAMME */
@@ -794,6 +856,11 @@ ADDRESS UNDER MAP */
     height: 600px;
     object-fit: cover;
   }
+  .merry-go-round-contact-img {
+    height: 400px;
+    overflow: hidden;
+    object-fit: cover;
+  }
   /* CAROUSEL LEGENDS */
   .text-oncarousel {
     font-size: auto;
@@ -803,6 +870,21 @@ ADDRESS UNDER MAP */
     text-align: center;
     width: 100%;
     position: absolute;
+  }
+  .contact-oncarousel {
+    font-size: auto;
+    margin-top: 190px !important;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .contact-link {
+    font-size: auto;
+    color: white;
+    width: 100%;
+    text-align: center;
   }
   .space-div {
     margin-bottom: 320px;
