@@ -236,30 +236,26 @@ export default class App extends React.Component {
                     <p></p>
                     <div className="space-div-contact"></div>
                   </div>
-                  <div className="carousel-img-container">
-                    <Carousel
-                      showArrows={true}
-                      autoPlay={true}
-                      autoFocus={true}
-                      emulateTouch={true}
-                      infiniteLoop={true}
-                      centerMode={false}
-                      showThumbs={false}
-                      showIndicators={false}
-                      stopOnHover={false}
-                      showStatus={false}
-                      height={500}
-                    >
-                      <div>
-                        <img
-                          src={contactimg}
-                          alt={contactimg}
-                          className="merry-go-round-contact-img"
-                          style={{ filter: "brightness(40%)" }}
-                        />
-                      </div>
-                    </Carousel>
-                  </div>
+                  <Carousel
+                    showArrows={true}
+                    autoPlay={true}
+                    infiniteLoop={true}
+                    centerMode={false}
+                    showThumbs={false}
+                    showIndicators={false}
+                    stopOnHover={false}
+                    showStatus={false}
+                    height={500}
+                  >
+                    <div>
+                      <img
+                        src={contactimg}
+                        alt={contactimg}
+                        className="merry-go-round-contact-img"
+                        style={{ filter: "brightness(40%)" }}
+                      />
+                    </div>
+                  </Carousel>
                 </div>
               </Observer>
             </div>
