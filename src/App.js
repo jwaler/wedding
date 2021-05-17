@@ -29,7 +29,6 @@ export default class App extends React.Component {
       visibilitythree: "hidden",
       visibilityfour: "hidden",
       visibilityfive: "hidden",
-      test: "test",
     };
   }
 
@@ -145,48 +144,45 @@ export default class App extends React.Component {
             </div>
 
             {/* VIDEO */}
-            <Observer onChange={this.FadeInContentTwo}>
-              <div className={`${this.state.visibilitytwo}`}>
-                <div className="invisible-to-mobile">
-                  <div className="video">
-                    <ReactPlayer
-                      url={video}
-                      muted={true}
-                      playing={true}
-                      loop={true}
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                </div>
-                <div className="invisible-to-desktop">
-                  <Carousel
-                    showArrows={true}
-                    autoPlay={true}
-                    autoFocus={true}
-                    interval={5000}
-                    emulateTouch={true}
-                    infiniteLoop={true}
-                    centerMode={false}
-                    centerSlidePercentage={90}
-                    showThumbs={false}
-                    showIndicators={false}
-                    stopOnHover={false}
-                    showStatus={false}
-                    transitionTime={1000}
-                  >
-                    <div className="img-container-scroll">
-                      <img
-                        src={gif}
-                        alt={gif}
-                        className="merry-go-round-img-scroll"
-                        style={{ filter: "brightness(90%)" }}
-                      />
-                    </div>
-                  </Carousel>
-                </div>
+
+            <div className="invisible-to-mobile">
+              <div className="video">
+                <ReactPlayer
+                  url={video}
+                  muted={true}
+                  playing={true}
+                  loop={true}
+                  width="100%"
+                  height="100%"
+                />
               </div>
-            </Observer>
+            </div>
+            <div className="invisible-to-desktop">
+              <Carousel
+                showArrows={true}
+                autoPlay={true}
+                autoFocus={true}
+                interval={5000}
+                emulateTouch={true}
+                infiniteLoop={true}
+                centerMode={false}
+                centerSlidePercentage={90}
+                showThumbs={false}
+                showIndicators={false}
+                stopOnHover={false}
+                showStatus={false}
+                transitionTime={1000}
+              >
+                <div className="img-container-scroll">
+                  <img
+                    src={gif}
+                    alt={gif}
+                    className="merry-go-round-img-scroll"
+                    style={{ filter: "brightness(90%)" }}
+                  />
+                </div>
+              </Carousel>
+            </div>
 
             {/* Programme */}
             <div id="programme">
