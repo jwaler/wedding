@@ -161,9 +161,7 @@ export default class App extends React.Component {
               <Carousel
                 showArrows={true}
                 autoPlay={true}
-                autoFocus={true}
                 interval={5000}
-                emulateTouch={true}
                 infiniteLoop={true}
                 centerMode={false}
                 centerSlidePercentage={90}
