@@ -106,7 +106,9 @@ export default class NavBar extends React.Component {
               </Link>
             </div>
             <div className="nav-main">
-              <a href="#liste-de-mariage">LISTE DE MARIAGE</a>
+              <a href="https://www.millemercismariage.com/benjamin-camille/mariage-de-benjamin-leroux-et-camille-chafey.html">
+                LISTES DE MARIAGE
+              </a>
             </div>
             <div className="nav-main">
               <Link
@@ -169,7 +171,10 @@ export default class NavBar extends React.Component {
                 </Link>
               </li>
               <li className="superli">
-                <a href="#liste-de-mariage" onClick={this.closeNav}>
+                <a
+                  href="https://www.millemercismariage.com/benjamin-camille/mariage-de-benjamin-leroux-et-camille-chafey.html"
+                  onClick={this.closeNav}
+                >
                   LISTE DE MARIAGE
                 </a>
               </li>
