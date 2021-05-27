@@ -171,7 +171,7 @@ export default class Programme extends React.Component {
           </div>
           <div className="col-6 mobile-col">
             <p></p>
-            <p className="card-two-prog-title">19h: COCKTAIL</p>
+            <p className="card-two-prog-title">19h00: COCKTAIL</p>
             <div className="card-two-prog-location">
               SUR LE TOIT DE L'AUTOMOBILE CLUB DE FRANCE
             </div>
