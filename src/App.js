@@ -1,5 +1,5 @@
 import "./App.css";
-// import Observer from "@researchgate/react-intersection-observer";
+import Observer from "@researchgate/react-intersection-observer";
 import ReactPlayer from "react-player";
 import { Link } from "react-scroll";
 import Timer from "./miniapps/clock.js";
@@ -134,13 +134,13 @@ export default class App extends React.Component {
 
             {/* TIMER + PHOTOS */}
             <div className="buffer-container">
-              {/* <Observer onChange={this.FadeInContentOne}> */}
-              <div className={`${this.state.visibilityone}`}>
-                <Timer></Timer>
-                <br />
-                <Cards></Cards>
-              </div>
-              {/* </Observer> */}
+              <Observer onChange={this.FadeInContentOne}>
+                <div className={`${this.state.visibilityone}`}>
+                  <Timer></Timer>
+                  <br />
+                  <Cards></Cards>
+                </div>
+              </Observer>
             </div>
 
             {/* VIDEO */}
@@ -184,78 +184,78 @@ export default class App extends React.Component {
 
             {/* Programme */}
             <div id="programme">
-              {/* <Observer onChange={this.FadeInContentThree}> */}
-              <div
-                style={{ paddingTop: "120px" }}
-                className={`${this.state.visibilitythree}`}
-              >
-                <div className="container-programme-row">
-                  <p className="programme-title">PROGRAMME</p>
-                  <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
-                  <p></p>
-                  <Programme></Programme>
+              <Observer onChange={this.FadeInContentThree}>
+                <div
+                  style={{ paddingTop: "120px" }}
+                  className={`${this.state.visibilitythree}`}
+                >
+                  <div className="container-programme-row">
+                    <p className="programme-title">PROGRAMME</p>
+                    <p className="programme-title">VENDREDI 3 SEPTEMBRE 2021</p>
+                    <p></p>
+                    <Programme></Programme>
+                  </div>
                 </div>
-              </div>
-              {/* </Observer> */}
+              </Observer>
             </div>
             {/* RVSP */}
             <div id="rsvp">
-              {/* <Observer onChange={this.FadeInContentFour}> */}
-              <div
-                className={`${this.state.visibilityfour}`}
-                style={{ paddingTop: "120px" }}
-              >
-                <div className="buffer-container">
-                  <div className="rsvp-carousel">
-                    <div className="span-text"></div>
-                    <AttendFormR></AttendFormR>
+              <Observer onChange={this.FadeInContentFour}>
+                <div
+                  className={`${this.state.visibilityfour}`}
+                  style={{ paddingTop: "120px" }}
+                >
+                  <div className="buffer-container">
+                    <div className="rsvp-carousel">
+                      <div className="span-text"></div>
+                      <AttendFormR></AttendFormR>
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/* </Observer> */}
+              </Observer>
             </div>
             {/* CONTACT */}
             <div id="contact">
-              {/* <Observer onChange={this.FadeInContentFive}> */}
-              <div
-                className={`${this.state.visibilityfive}`}
-                style={{ paddingTop: "120px" }}
-              >
-                <div className="contact-oncarousel">
-                  <div className="contact-frame">
-                    <a
-                      className="contact-link"
-                      href="mailto:contact@benjamin-camille.com"
-                    >
-                      CONTACT@BENJAMIN-CAMILLE.COM
-                    </a>
-                  </div>
-                  <p></p>
-                  <p></p>
-                  <div className="space-div-contact"></div>
-                </div>
-                <Carousel
-                  showArrows={true}
-                  autoPlay={true}
-                  infiniteLoop={true}
-                  centerMode={false}
-                  showThumbs={false}
-                  showIndicators={false}
-                  stopOnHover={false}
-                  showStatus={false}
-                  height={500}
+              <Observer onChange={this.FadeInContentFive}>
+                <div
+                  className={`${this.state.visibilityfive}`}
+                  style={{ paddingTop: "120px" }}
                 >
-                  <div>
-                    <img
-                      src={contactimg}
-                      alt={contactimg}
-                      className="merry-go-round-contact-img"
-                      style={{ filter: "brightness(40%)" }}
-                    />
+                  <div className="contact-oncarousel">
+                    <div className="contact-frame">
+                      <a
+                        className="contact-link"
+                        href="mailto:contact@benjamin-camille.com"
+                      >
+                        CONTACT@BENJAMIN-CAMILLE.COM
+                      </a>
+                    </div>
+                    <p></p>
+                    <p></p>
+                    <div className="space-div-contact"></div>
                   </div>
-                </Carousel>
-              </div>
-              {/* </Observer> */}
+                  <Carousel
+                    showArrows={true}
+                    autoPlay={true}
+                    infiniteLoop={true}
+                    centerMode={false}
+                    showThumbs={false}
+                    showIndicators={false}
+                    stopOnHover={false}
+                    showStatus={false}
+                    height={500}
+                  >
+                    <div>
+                      <img
+                        src={contactimg}
+                        alt={contactimg}
+                        className="merry-go-round-contact-img"
+                        style={{ filter: "brightness(40%)" }}
+                      />
+                    </div>
+                  </Carousel>
+                </div>
+              </Observer>
             </div>
           </div>
           {/* FIN CONTAINER */}
