@@ -143,7 +143,7 @@ FOOTER */
   height: 50px;
 }
 .footer-info {
-  padding-top: 150px;
+  padding-top: 80px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -423,6 +423,9 @@ ADDRESS UNDER MAP */
 }
 /* MOBILE  */
 @media (max-width: 600px) {
+  .main-logo {
+    width: 95px;
+  }
   .thank-msg {
     font-size: 14px;
   }
@@ -595,13 +598,11 @@ ADDRESS UNDER MAP */
     display: none;
   }
   .logo-couple {
-    font-size: 14px;
     justify-content: center;
     margin: 0 auto;
-    margin-left: 100px;
     padding: 0 auto;
-    text-align: right;
-    display: flex;
+    text-align: center;
+    padding-left: 80px;
   }
   .insta {
     text-align: center;
@@ -628,6 +629,12 @@ ADDRESS UNDER MAP */
 }
 /* DESKTOP  */
 @media (min-width: 992px) {
+  .main-logo {
+    width: 95px;
+  }
+  .nav-main {
+    margin: 15px !important;
+  }
   .invisible-to-desktop {
     display: none;
   }
@@ -809,9 +816,11 @@ ADDRESS UNDER MAP */
     opacity: 1;
   }
   /* NAVBAR */
+  .insta {
+    text-align: center;
+  }
   .hashtag {
-    margin-right: 25px;
-    font-size: 10px;
+    font-size: 8px;
   }
   .not-visible-for-desktop {
     display: none;
@@ -832,6 +841,9 @@ ADDRESS UNDER MAP */
 }
 /* IPAD */
 @media (max-width: 991px) and (min-width: 600px) {
+  .main-logo {
+    width: 95px;
+  }
   .invisible-to-desktop {
     display: none;
   }
@@ -970,12 +982,11 @@ ADDRESS UNDER MAP */
     display: none;
   }
   .logo-couple {
-    font-size: 16px;
     justify-content: center;
     margin: 0 auto;
     padding: 0 auto;
     text-align: center;
-    display: flex;
+    padding-left: 80px;
   }
   .insta {
     text-align: center;
@@ -993,6 +1004,9 @@ ADDRESS UNDER MAP */
 }
 /* NEED MODIFICATIONS */
 @media (max-width: 321px) {
+  .main-logo {
+    width: 95px;
+  }
   .logo-couple {
     justify-content: center;
     font-size: 15px;
@@ -1026,6 +1040,9 @@ ADDRESS UNDER MAP */
 }
 /* MACBOOK SCREEN  */
 @media (max-height: 780px) and (min-width: 992px) {
+  .main-logo {
+    width: 95px;
+  }
   .merry-go-round-img {
     height: 620px;
     overflow: hidden;

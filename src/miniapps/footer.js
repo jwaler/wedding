@@ -1,6 +1,7 @@
 import Popover from "react-bootstrap/Popover";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Button from "react-bootstrap/Button";
+import logo from "./../static/img/logo.png";
 
 function ContactPopover() {
   const ContactPopover = (
@@ -11,6 +12,14 @@ function ContactPopover() {
 
   return (
     <div>
+      <div style={{ marginBottom: "50px" }}>
+        <img
+          className="main-logo"
+          style={{ width: "65px" }}
+          src={logo}
+          alt={logo}
+        />
+      </div>
       <OverlayTrigger trigger="click" placement="top" overlay={ContactPopover}>
         <Button variant="outline-dark" className="footer-button">
           CREE PAR JEREMY LEROUX

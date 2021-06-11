@@ -4,6 +4,7 @@ import React from "react";
 import insta from "./../static/img/insta.png";
 import { Link } from "react-scroll";
 import cametben from "./../static/img/camb1.png";
+import logo from "./../static/img/logo.png";
 // import logo from "./../static/img/camb2.png";
 
 export default class NavBar extends React.Component {
@@ -66,9 +67,10 @@ export default class NavBar extends React.Component {
               <i className="fa fa-bars"></i>
             </a>
           </button>
-          {/* <img style={{ height: "40px" }} src={logo} alt="" /> */}
-          {/* <b>{logo}</b> */}
-          <div className="logo-couple"></div>
+
+          <div className="logo-couple">
+            <img className="main-logo" src={logo} alt={logo} />
+          </div>
           <div className="insta">
             <a href="https://www.instagram.com/ben_cam_2022">
               <img className="insta-logo" src={insta} alt={insta} />
@@ -81,8 +83,12 @@ export default class NavBar extends React.Component {
               </div>
             </a>
           </div>
+          {/* MENU DESKTOP */}
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="align-menu-link"></div>
+            <div className="nav-main">
+              <img className="main-logo" src={logo} alt={logo} />
+            </div>
             <div className="nav-main">
               <Link
                 activeClass={"active"}
@@ -107,7 +113,7 @@ export default class NavBar extends React.Component {
             </div>
             <div className="nav-main">
               <a href="https://www.millemercismariage.com/benjamin-camille/mariage-de-benjamin-leroux-et-camille-chafey.html">
-                LISTES DE MARIAGE
+                LISTE DE MARIAGE
               </a>
             </div>
             <div className="nav-main">
@@ -133,6 +139,8 @@ export default class NavBar extends React.Component {
               </Link>
             </div>
           </div>
+
+          {/* MENU IPAD ? MOB */}
           <div className={this.state.menu}>
             <button
               id="toggler"
@@ -145,7 +153,7 @@ export default class NavBar extends React.Component {
               </a>
             </button>
             <ul className="superul">
-              <img style={{ width: "150px" }} src={cametben} alt={cametben} />
+              <img style={{ width: "150px" }} src={logo} alt={logo} />
               <hr className="sidemenu" />
               <li className="superli">
                 <Link
@@ -204,10 +212,13 @@ export default class NavBar extends React.Component {
             </ul>
           </div>
 
-          <div className="hashtag">#benetcam22</div>
           <div className="insta">
             <a href="https://www.instagram.com/ben_cam_2022">
               <img className="insta-large-screen" src={insta} alt={insta} />
+              <p></p>
+              <div className="hashtag" tyle={{ fontSize: "8px" }}>
+                #benetcam22
+              </div>
             </a>
           </div>
         </nav>

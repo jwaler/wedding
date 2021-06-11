@@ -36,6 +36,31 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="modal fade" id="BrowserModel" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="demoModalLabel">Warning - Browser not supported !</h5>
+            <button type="button" class="close" data-dismiss="modal" aria- label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <b>Your Browser is Not Supported our Website !!</b><br>
+            This is Example of Browser Compatibility.
+          </div>
+          <div class="checkbox modal-body">
+            <input type="checkbox" name="understand_checkbox" class="styled" value="checked" id="understand_checkbox"> I
+            understand term and condition, but still want to continue.
+          </div>
+          <div class="modal-footer">
+            <button type="button" value="proceed" id="proceed" name="proceed" data-dismiss="modal" class="btn btn-info"
+              disabled>Proceed</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -50,6 +75,50 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    
   </body>
+  <script>
+  $(document).ready(function(){
+  
+  let userAgentString = navigator.userAgent;
+  
+  let IExplorerAgent = userAgentString.indexOf("MSIE") > -1 ||
+  userAgentString.indexOf("rv:") > -1;
+  
+  let firefoxAgent = userAgentString.indexOf("Firefox") > -1;
+  
+  let safariAgent = userAgentString.indexOf("Safari") > -1;  
+  
+  if(firefoxAgent || safariAgent)
+  {
+  console.log("firefox: "+firefoxAgent);
+  console.log("safari: "+safariAgent);
+  $("#BrowserModel").modal('hide');
+  }else{
+  console.log("Default show");
+  $("#BrowserModel").modal('show');
+  }
+  
+  $('#understand_checkbox').click(function(){
+  if($(this).is(':checked')){
+  $('#proceed').attr("disabled", false);
+  
+  $("#proceed"). click(function(){
+  var str = $("#understand_checkbox").val();
+  if (typeof(Storage) !== "undefined") {
+  var is_browser_checked = str;
+  localStorage.setItem('is_browser_checked', is_browser_checked);
+  }
+  });
+  } else{
+  $('#proceed').attr("disabled", true);
+  }
+  });
+  
+  var data = localStorage.getItem('is_browser_checked');
+  if(data == "checked")
+  {
+  $("#BrowserModel").modal('hide');
+  }
+  });
+  </script>
 </html>
