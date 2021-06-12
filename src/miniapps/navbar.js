@@ -57,17 +57,19 @@ export default class NavBar extends React.Component {
     return (
       <div className="navbar-scroll">
         <nav className="navbar mynavbar navbar-expand-lg navbar-light bg-light">
-          <button
-            id="toggler"
-            className={this.state.initial}
-            type="button"
-            onClick={this.showMenu}
-          >
-            <a className="atoggle">
-              <i className="fa fa-bars"></i>
-            </a>
-          </button>
-
+          <div className="logo-toggler">
+            <button
+              id="toggler"
+              className={this.state.initial}
+              type="button"
+              onClick={this.showMenu}
+            >
+              <a className="atoggle">
+                <i className="fa fa-bars"></i>
+              </a>
+            </button>
+          </div>
+          {/* MOBILE IPAD NAVBAR RENDERING */}
           <div className="logo-couple">
             <img className="main-logo" src={logo} alt={logo} />
           </div>
@@ -77,9 +79,9 @@ export default class NavBar extends React.Component {
               <p></p>
               <div
                 className="not-visible-for-desktop"
-                style={{ fontSize: "8px" }}
+                style={{ fontSize: "7px" }}
               >
-                #benetcam22
+                #BENETCAM22
               </div>
             </a>
           </div>
@@ -152,7 +154,7 @@ export default class NavBar extends React.Component {
                 <i className="fa fa-times" aria-hidden="true"></i>
               </a>
             </button>
-            <ul className="superul">
+            <ul className="superul" style={{ paddingBottom: "20%" }}>
               <img style={{ width: "150px" }} src={logo} alt={logo} />
               <hr className="sidemenu" />
               <li className="superli">
@@ -217,7 +219,7 @@ export default class NavBar extends React.Component {
               <img className="insta-large-screen" src={insta} alt={insta} />
               <p></p>
               <div className="hashtag" tyle={{ fontSize: "8px" }}>
-                #benetcam22
+                #BENETCAM22
               </div>
             </a>
           </div>

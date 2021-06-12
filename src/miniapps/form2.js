@@ -1,5 +1,6 @@
 import "./../App.css";
 import React from "react";
+import acf from "./../static/img/acf.png";
 
 export default class AttendFormR extends React.Component {
   constructor(props) {
@@ -145,16 +146,25 @@ export default class AttendFormR extends React.Component {
           padding: "3px",
         }}
       >
-        <p className="thank-msg">Merci, {self.state.guestname} !</p>
+        <p className="thank-msg">MERCI, {self.state.guestname} !</p>
         <p className="thank-msg">
-          Nous sommes impatients de fêter cet évènement mémorable avec vous !
+          NOUS SOMMES IMPATIENTS DE FÊTER CET ÉVÈNEMENT MÉMORABLE AVEC VOUS !
+        </p>
+        <div>
+          <img src={acf} alt={acf} style={{ width: "35px" }} />
+          <p></p>
+        </div>
+        <p className="dresscode">DRESSING CODE OBLIGATOIRE :</p>
+        <p className="dresscode">
+          RAPPELONS QUE LE CERCLE INTERDIT LES JEANS, PANTALONS DENIMS, BASKETS,
+          ET IMPOSE AUX HOMMES LE PORT D'UNE CRAVATE ET D'UNE VESTE.
         </p>
       </div>
     );
     const seeYouAgain = (
       <div>
-        <p className="thank-msg">Quel dommage, {self.state.guestname} !</p>
-        <p className="thank-msg">Nous vous embrassons quand même bien fort.</p>
+        <p className="thank-msg">QUEL DOMMAGE, {self.state.guestname} !</p>
+        <p className="thank-msg">NOUS VOUS EMBRASSONS QUAND MÊME BIEN FORT.</p>
       </div>
     );
     return (
