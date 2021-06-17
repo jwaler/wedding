@@ -188,7 +188,7 @@ export default class AttendFormR extends React.Component {
           <div>
             <div className="card-rsvp-title">
               <p className="card-rsvp-title-p">
-                NOUS ATTENDONS VOTRE REPONSE <br></br>AVANT LE 3 JUILLET 2021
+                NOUS ATTENDONS VOTRE REPONSE <br></br>AVANT LE 14 JUILLET 2021
               </p>
             </div>
 
