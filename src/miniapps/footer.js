@@ -2,6 +2,7 @@ import Popover from "react-bootstrap/Popover";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Button from "react-bootstrap/Button";
 import logo from "./../static/img/logo.png";
+import React from "react";
 
 function ContactPopover() {
   const ContactPopover = (
