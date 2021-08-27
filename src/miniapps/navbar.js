@@ -182,7 +182,7 @@ export default class NavBar extends React.Component {
               </li>
               <li className="superli">
                 <a
-                  href="https://www.millemercismariage.com/benjamin-camille/mariage-de-benjamin-leroux-et-camille-chafey.html"
+                  href="https://www.millemercismariage.com/benjamin-camille/liste.html"
                   onClick={this.closeNav}
                 >
                   LISTE DE MARIAGE
