@@ -21,7 +21,7 @@ function AttendForm() {
       }}
     >
       <h3>Merci, {guest} !</h3>
-      <h3>Nous sommes très heureux de vous compter parmi nous.</h3>
+      <h3>Nous sommes très heureux de vous compter parmi nous..</h3>
       <h3>A très bientôt!</h3>
     </div>
   );
