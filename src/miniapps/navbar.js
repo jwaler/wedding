@@ -114,7 +114,7 @@ export default class NavBar extends React.Component {
               </Link>
             </div>
             <div className="nav-main">
-              <a href="https://www.millemercismariage.com/benjamin-camille/mariage-de-benjamin-leroux-et-camille-chafey.html">
+              <a href="https://www.millemercismariage.com/benjamin-camille/liste.html">
                 LISTE DE MARIAGE
               </a>
             </div>
