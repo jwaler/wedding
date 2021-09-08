@@ -72,7 +72,7 @@ export default class App extends React.Component {
           <div className="main-container">
             {/* CAROUSEL MAIN MENU */}
             <div className="text-oncarousel">
-              <div className="benetcam">BENJAMIN LEROUX ET CAMILLE CHAFEY</div>
+              <div className="benetcam">BENJAMIN ET CAMILLE</div>
               <p></p>
               <div>SE MARIENT</div>
               <p></p>
